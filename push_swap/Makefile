@@ -6,11 +6,11 @@
 #    By: mdanchev <mdanchev@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/15 12:21:59 by mdanchev          #+#    #+#              #
-#    Updated: 2023/01/24 16:02:21 by mdanchev         ###   lausanne.ch        #
+#    Updated: 2023/01/25 14:05:37 by mdanchev         ###   lausanne.ch        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = ft_checker_intMax_intMin.c
+SRCS = push_swap.c
 
 OBJS = ${SRCS:.c=.o}
 
