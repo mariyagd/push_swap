@@ -65,7 +65,7 @@ void no_other_char(char **str)
         j = 0;
         while(str[i][j] != 0)
         {
-            if (j == 0 && str[i][j] == '-')
+           if (j == 0 && str[i][j] == '-')
                 j++;
             if (!(str[i][j] >= 48 && str[i][j] <= 57))
                 error_msg_stop();

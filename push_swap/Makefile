@@ -6,11 +6,15 @@
 #    By: mdanchev <mdanchev@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/15 12:21:59 by mdanchev          #+#    #+#              #
-#    Updated: 2023/01/27 11:19:32 by mdanchev         ###   lausanne.ch        #
+#    Updated: 2023/01/27 17:20:45 by mdanchev         ###   lausanne.ch        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = push_swap.c errors_checker.c
+SRCS = 			push_swap.c \
+				errors_checker.c \
+				check_case_of_string.c \
+				error_msg.c \
+				sort_int_tab.c
 
 OBJS = ${SRCS:.c=.o}
 
