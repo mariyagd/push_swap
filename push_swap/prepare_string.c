@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "push_swap.h"
 
-bool check_one_string(char *av)
+bool one_string_case(char *av)
 {
     char    **str;
     int i;
@@ -37,7 +37,7 @@ bool check_one_string(char *av)
         return (false);
 }
 
-int check_which_case(char **av)
+int string_case(char **av)
 {
     int count;
 
@@ -46,7 +46,7 @@ int check_which_case(char **av)
         count++;
     if (count == 1)
     {
-        if (check_one_string(*av) == true)
+        if (one_string_case(*av) == true)
             return (one_str_mult_num);
         else
             return (one_num);

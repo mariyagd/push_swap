@@ -1,151 +1,119 @@
 #include <stdio.h>
 #include "push_swap.h"
 
-typedef	struct	s_node
-{
-	int		num;
-	int		index;
-	s_node	*next;
-	s_node	*previous;
-	int		flag;
-}			t_node;
 
-typedef	struct s_stack
+t_stack *penultimate(t_stack **s)
 {
-	t_node	*stack_a;
-	t_node	*stack_b;
-	int		len_max;
-	int		actual_len;
-	int		min_a;
-	int		min_b;
-	int		median;
-}			t_stack;
+	t_stack *ptr1;
+	t_stack *ptr2;
 
-char	**check_case(char **av)
-{
-	char	**str;
-
-	str = NULL;
-	if (check_which_case(av) == one_str_mult_num)
+	ptr1 = NULL;
+	ptr2 = NULL;
+	ptr1 = *s;
+	while (ptr1 != NULL && ptr1->next != NULL)
 	{
-		str = ft_split(*av, 32);
-		if (!str)
-			return (NULL);
-		return (str);
+		ptr2 = ptr1;
+		ptr1 = ptr1->next;
 	}
-	else if (check_which_case(av) == one_num)
-		exit(0);
-	else
-		return (av);
+	return (ptr2);
 }
 
-int	count_size_arr(char	**str)
+void	print_message(t_stack *a, t_stack *b, char *op)
 {
-	int	count;
 
-	count = 0;
-	while (*str)
+	ft_printf("\n[%s]\n\n", op);
+	while (a != NULL)
 	{
-		count++;
-		str++;
+		ft_printf("%d\n", a->content);
+		a = a->next;
 	}
-	return (count);
+	ft_printf("----\na\n\n"); 
+	while (b != NULL)
+	{
+		ft_printf("%d\n", b->content);
+		b = b->next;
+	}
+	ft_printf("----\nb\n\n"); 
 }
 
-void	fill_index(t_stack **a)
-{
-	t_stack	*ptr;
-	int		i;
-
-	i = 0;
-	ptr = malloc(sizeof(ptr));
-	if (!ptr)
-		return ;
-	ptr->stack = (*a)->stack;
-	ptr->len_max = (*a)->len_max;
-	ptr->
-	sort_int_tab(ptr->stack, (unsigned int)(*a)->len_max);
-	while (i < (*a)->len_max)
-	{
-		ptr->index = i;
-		i++;
-	}
-	i = 0;
-	while (i < (*a)->len_max)
-	{
-		(*a)->index = ptr->index;
-		i++;
-	}
-	ptr = NULL;
-	free (ptr);
-}
-
-
-
-t_stack	*prepare_a(char	**av)
-{
-	char	**str;
-	int		size;
-	int		i;
-	t_stack	*a;
-
-	a = malloc(sizeof(a));
-	if (!a)
-		return (NULL);
-	str = check_case(av);
-	i = 0;
-	if (!str)
-		return (NULL);
-	size = count_size_arr(str);
-	a->stack = malloc(size * sizeof(int));
-	if (!a->stack)
-		return (NULL);
-	while (*str)
-	{
-		a->stack[i] = ft_atoi(*str);
-		i++;
-		str++;
-	}
-	a->len_max = size;
-	a->actual_len = size;
-	fill_index(&a);
-	return (a);
-}
 
 int	main(int ac, char*av[])
 {
 	t_stack	*a;
+	t_stack *b = NULL;
 
 	if (ac == 1)
 		return (0);
 	av++;
-	a = prepare_a(av);
-//	if (check_if_sorted(a, a->len_max, a->actual_len) == true)
-//		return (0);
+	a = prepare_stack_a(av);
+	
+	print_message(a, b, "initial stack");
 
-//	check stack a
+	ft_pb(&a, &b);
+	print_message(a, b, "pb");
 
-	int	len;
-	int	i = 0;
-	len = a->len_max;
-	printf("size stack a = %d\n", len);
-	printf("stack a = ");
-	while(i < len)
-	{
-		printf("%d ", a->stack[i]);
-		i++;
-	}
-	i = 0;
-	printf("\n");
-	printf("index sort of stack a = ");
-	while (i < len)
-	{
-		printf("%d ", a->index);
-		i++;
-	}
+	ft_pb(&a, &b);
+	ft_pb(&a, &b);
+	ft_pb(&a, &b);
+	ft_pb(&a, &b);
+	ft_pb(&a, &b);
+	ft_pb(&a, &b);
+	print_message(a, b, "pb pb pb pb pb pb");
 
+	ft_ra(&a);
+	print_message(a, b, "ra");
 
-	return (0);
+	ft_pa(&a, &b);
+	ft_pa(&a, &b);
+	ft_pa(&a, &b);
+	ft_pa(&a, &b);
+	ft_pa(&a, &b);
+	ft_pa(&a, &b);
+	print_message(a, b, "pa pa pa pa pa pa");
+
+	ft_rrr(&a, &b);
+	ft_rrr(&a, &b);
+	ft_rrr(&a, &b);
+	ft_rrr(&a, &b);
+	print_message(a, b, "rrr rrr rrr rrr");
+
+	ft_rb(&b);
+	print_message(a, b, "rb");
+	
+	ft_pb(&a, &b);
+	ft_pb(&a, &b);
+	ft_pb(&a, &b);
+	ft_pb(&a, &b);
+	ft_pb(&a, &b);
+	ft_pb(&a, &b);
+	print_message(a, b, "pb pb pb pb pb pb");
+	
+	ft_rrr(&a, &b);
+	ft_rrr(&a, &b);
+	ft_rrr(&a, &b);
+	ft_rrr(&a, &b);
+	print_message(a, b, "rrr rrr rrr rrr");
+	
+	ft_ra(&a);
+	ft_ra(&a);
+	ft_ra(&a);
+	ft_ra(&a);
+	ft_ra(&a);
+	print_message(a, b, "ra ra ra ra ra");
+
+	ft_pa(&a, &b);
+	ft_pa(&a, &b);
+	ft_pa(&a, &b);
+	ft_pa(&a, &b);
+	print_message(a, b, "pa pa pa pa");
+
+	ft_rrr(&a, &b);
+	ft_rrr(&a, &b);
+	print_message(a, b, "rrr rrr");
+	
+	ft_rr(&a, &b);
+	ft_rr(&a, &b);
+	print_message(a, b, "rr rr");
 }
 
 /*

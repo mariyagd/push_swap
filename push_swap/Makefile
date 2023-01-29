@@ -12,9 +12,13 @@
 
 SRCS = 			push_swap.c \
 				errors_checker.c \
-				check_case_of_string.c \
+				prepare_string.c \
 				error_msg.c \
-				sort_int_tab.c
+				sort_int_tab.c \
+				nodes.c \
+				push_ops.c \
+				rotate_ops.c \
+				rev_rotate_ops.c
 
 OBJS = ${SRCS:.c=.o}
 
