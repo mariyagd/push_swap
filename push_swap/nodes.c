@@ -10,26 +10,6 @@ t_stack *find_lastnode(t_stack **head)
     return (ptr);
 }
 
-//used in ft_pb
-//s1 is donor stack
-//s2 is the destination stack
-void	frontadd_push_op(t_stack **s1, t_stack **s2)
-{
-
-	t_stack	*tmp;
-
-	tmp = (*s1)->next;
-	if (*s2 == NULL)
-	{
-		(*s1)->next = NULL;
-	}
-	else if (*s2 != NULL)
-	{
-		(*s1)->next = *s2;
-	}
-	*s2 = *s1;
-	*s1 = tmp;
-}
 /*
 void	frontadd(t_stack **head, t_stack **new_node)
 {
