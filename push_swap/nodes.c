@@ -22,15 +22,13 @@ void	frontadd_push_op(t_stack **s1, t_stack **s2)
 	if (*s2 == NULL)
 	{
 		(*s1)->next = NULL;
-		*s2 = *s1;
-		*s1 = tmp;
 	}
 	else if (*s2 != NULL)
 	{
 		(*s1)->next = *s2;
-		*s2 = *s1;
-		*s1 = tmp;
 	}
+	*s2 = *s1;
+	*s1 = tmp;
 }
 /*
 void	frontadd(t_stack **head, t_stack **new_node)
