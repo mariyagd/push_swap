@@ -54,21 +54,25 @@ void    	sort_index(t_stack **head);
 //check if sorted
 void		check_if_sorted_and_exit(t_stack *s, int	size);
 
+//index max et min
+int			find_max_index(t_stack *s);
+int			find_min_index(t_stack *s);
+
 //operations
-void    frontadd_push_op(t_stack **s1, t_stack **s2);
-void	push_op(t_stack **s1, t_stack **s2);
-void	ft_pb(t_stack **a, t_stack **b);
-void	ft_pa(t_stack **a, t_stack **b);
-void	rev_rotate(t_stack **s);
-void	ft_rrb(t_stack **b);
-void	ft_rra(t_stack **a);
-void	ft_rrr(t_stack **a, t_stack **b);
-void	rotate_op(t_stack **s);
-void	ft_rb(t_stack **b);
-void	ft_ra(t_stack **a);
-void	ft_rr(t_stack **a, t_stack **b);
-void    swap_op(t_stack **s);
-void    ft_sa(t_stack **a);
-void    ft_sb(t_stack **b);
-void    ft_ss(t_stack **a, t_stack **b);
+void    	frontadd_push_op(t_stack **s1, t_stack **s2);
+void		push_op(t_stack **s1, t_stack **s2);
+void		ft_pb(t_stack **a, t_stack **b);
+void		ft_pa(t_stack **a, t_stack **b);
+void		rev_rotate(t_stack **s);
+void		ft_rrb(t_stack **b);
+void		ft_rra(t_stack **a);
+void		ft_rrr(t_stack **a, t_stack **b);
+void		rotate_op(t_stack **s);
+void		ft_rb(t_stack **b);
+void		ft_ra(t_stack **a);
+void		ft_rr(t_stack **a, t_stack **b);
+void    	swap_op(t_stack **s);
+void    	ft_sa(t_stack **a);
+void    	ft_sb(t_stack **b);
+void    	ft_ss(t_stack **a, t_stack **b);
 #endif
