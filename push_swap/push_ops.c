@@ -14,12 +14,14 @@ void	push_op(t_stack **s1, t_stack **s2)
 
 void	ft_pb(t_stack **a, t_stack **b)
 {
-	push_op(a, b);	
+	push_op(a, b);
+	ft_printf("pb\n");
 }
 
 void	ft_pa(t_stack **a, t_stack **b)
 {
 	push_op(b, a);
+	ft_printf("pa\n");
 }
 
 void	frontadd_push_op(t_stack **s1, t_stack **s2)

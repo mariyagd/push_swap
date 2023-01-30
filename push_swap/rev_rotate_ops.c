@@ -6,10 +6,8 @@ void	rev_rotate(t_stack **s)
 	t_stack	*prev;
 	t_stack	*head;
 
-	if (!*s)
+	if (!*s || (*s)->next == NULL)
 		return ;
-	if ((*s)->next == NULL)
-		return;
 	head = *s;
 	end = *s;
 	while (end->next)
@@ -25,17 +23,18 @@ void	rev_rotate(t_stack **s)
 void	ft_rrb(t_stack **b)
 {
 	rev_rotate(b);
+	ft_printf("rrb\n");
 }
 
 void	ft_rra(t_stack **a)
 {
 	rev_rotate(a);
+	ft_printf("rra\n");
 }
 
 void	ft_rrr(t_stack **a, t_stack **b)
 {
-	if (*a)
-		ft_rra(a);
-	if (*b)
-		ft_rrb(b);
+	rev_rotate(a);
+	rev_rotate(b);
+	ft_printf("rrr\n");
 }

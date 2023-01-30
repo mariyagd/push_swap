@@ -5,9 +5,7 @@ void	rotate_op(t_stack **s)
 	t_stack	*end;
 	t_stack	*start;
 
-	if (!*s)
-		return ;
-	if ((*s)->next == NULL)
+	if (!*s || (*s)->next == NULL)
 		return;
 	start = *s;
 	*s = (*s)->next;
@@ -23,17 +21,18 @@ void	rotate_op(t_stack **s)
 void	ft_rb(t_stack **b)
 {
 	rotate_op(b);
+	ft_printf("rb\n");
 }
 
 void	ft_ra(t_stack **a)
 {
 	rotate_op(a);
+	ft_printf("ra\n");
 }
 
 void	ft_rr(t_stack **a, t_stack **b)
 {
-	if (*a)
-		ft_ra(a);
-	if (*b)
-		ft_rb(b);
+	rotate_op(a);
+	rotate_op(b);
+	ft_printf("rr\n");
 }

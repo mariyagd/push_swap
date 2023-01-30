@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_case_of_string.c                             :+:      :+:    :+:   */
+/*   prepare_string.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdanchev <mdanchev@42lausanne.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 16:08:51 by mdanchev          #+#    #+#             */
-/*   Updated: 2023/01/27 16:13:46 by mdanchev         ###   lausanne.ch       */
+/*   Updated: 2023/01/30 13:31:19 by mdanchev         ###   lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -29,7 +29,9 @@ bool one_string_case(char *av)
     {
         str = ft_split(av, 32);
         no_errors(str);
-		str = NULL;
+		i = 0;
+		while (str[i])
+			free(str[i++]);
 		free(str);
         return (true);
     }

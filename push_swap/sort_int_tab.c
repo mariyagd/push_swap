@@ -10,7 +10,7 @@ void sort_int_tab(int **tab, unsigned int size)
 	j = 0;
 	if (size == 1 || size == 0)
 		return ;
-	while (i < size - 2)
+	while (i < size - 1)
 	{
 		j = 0;
 		while (j < size - 1)
@@ -23,21 +23,21 @@ void sort_int_tab(int **tab, unsigned int size)
 			}
 			j++;
 		}
-		i++;	
+		i++;
 	}
 }
 
 void    sort_index(t_stack **head)
 {
-    int size;
-    int *i_array;
-    int i;
-    t_stack *ptr;
+    int			size;
+    int			*i_array;
+    int			i;
+    t_stack		*ptr;
 
     i = 0;
     ptr = *head;
     size = stack_size(*head);
-    i_array = malloc(sizeof(int));
+    i_array = malloc(size * sizeof(int));
     if (!i_array)
         return ;
     while (i < size && ptr != NULL)
@@ -63,6 +63,9 @@ void    sort_index(t_stack **head)
             ptr = ptr->next;
     }
 }
+
+
+
 /*
 void    set_actual_index(t_stack **a)
 {
@@ -95,5 +98,22 @@ int	main(void)
 	return (0);
 }
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

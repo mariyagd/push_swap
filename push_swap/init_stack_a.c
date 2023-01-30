@@ -1,31 +1,18 @@
 #include "push_swap.h"
 
-t_stack *find_lastnode(t_stack **head)
+t_stack *new_node(char *str)
 {
-	t_stack	*ptr;
+    t_stack *new;
 
-	ptr = *head;
-    while (ptr != NULL && ptr->next != NULL)
-        ptr= ptr->next;
-    return (ptr);
+    new = malloc(sizeof(t_stack));
+    if (!new)
+        return (NULL);
+    new->next = NULL;
+    new->content = ft_atoi(str);
+    new->index_sorted = 0;
+    return (new);
 }
 
-/*
-void	frontadd(t_stack **head, t_stack **new_node)
-{
-
-	if (*head == NULL)
-	{
-		(*new_node)->next = NULL;
-		*head = *new_node;
-	}
-	else if (*head != NULL)
-	{
-		(*new_node)->next = *head;
-		*head = *new_node;
-	}
-}
-*/
 
 void    node_backadd(t_stack **head, t_stack **new_node)
 {
@@ -45,19 +32,6 @@ void    node_backadd(t_stack **head, t_stack **new_node)
     }
 }
 
-t_stack *new_node(char *str)
-{
-    t_stack *new;
-
-    new = malloc(sizeof(t_stack));
-    if (!new)
-        return (NULL);
-    new->next = NULL;
-    new->content = ft_atoi(str);
-    new->index_sorted = 0;
-// 	new->actual_ind = 0;
-    return (new);
-}
 
 t_stack *init_stack_a(char **str)
 {
@@ -75,9 +49,11 @@ t_stack *init_stack_a(char **str)
         a = new_node(str[i]);
         if (!a)
         {
-            head = NULL;
-            free (head);
-            return (NULL);
+            while (head != NULL)
+			{
+				free_list(&head);
+				return (NULL);
+			}
         }
         node_backadd(&head, &a);
         i++;
@@ -98,25 +74,37 @@ t_stack *prepare_stack_a(char **av)
         if (!str)
             return (NULL);
         a = init_stack_a(str);
-        str = NULL;
-        free (str);
+		free_string(str);
     }
     if (string_case(av) == multiple_string)
-    {
         a = init_stack_a(av);
-    }
+	if (!a)
+		return (NULL);
     return (a);
 }
 
-int stack_size(t_stack *ptr)
+t_stack *create_stack_a(char **av, t_stack **a)
 {
-    int size;
+    char        **str;
+    int         str_case;
 
-    size = 0;
-    while (ptr != NULL)
+    str = NULL;
+    str_case = 0;
+    str_case = string_case(av);
+    if (str_case == one_str_mult_num)
     {
-        ptr = ptr->next;
-        size++;
+        str = ft_split(*av, 32);
+        if (!str)
+            return (NULL);
+        *a = prepare_stack_a(str);
+        free_string(str);
     }
-    return (size);
+    else if (str_case == multiple_string)
+        *a = prepare_stack_a(av);
+    else if (str_case == one_num)
+        exit(0);
+    if (!a)
+        return (NULL);
+    check_if_sorted_and_exit(*a, stack_size(*a));
+    return (*a);
 }

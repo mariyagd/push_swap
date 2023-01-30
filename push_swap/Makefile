@@ -6,19 +6,24 @@
 #    By: mdanchev <mdanchev@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/15 12:21:59 by mdanchev          #+#    #+#              #
-#    Updated: 2023/01/27 17:20:45 by mdanchev         ###   lausanne.ch        #
+#    Updated: 2023/01/30 14:14:49 by mdanchev         ###   lausanne.ch        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = 			push_swap.c \
-				errors_checker.c \
+SRCS = 			errors_checker.c \
 				prepare_string.c \
 				error_msg.c \
 				sort_int_tab.c \
-				nodes.c \
+				nodes_ops.c \
 				push_ops.c \
 				rotate_ops.c \
-				rev_rotate_ops.c
+				rev_rotate_ops.c \
+				init_stack_a.c \
+				push_swap.c \
+				sort_list.c \
+				swap_ops.c \
+				free_ops.c
+
 
 OBJS = ${SRCS:.c=.o}
 
@@ -26,7 +31,7 @@ NAME = push_swap
 CC		= gcc
 RM		= rm -f
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g -fsanitize=address -fno-omit-frame-pointer
 
 .c.o:
 		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
