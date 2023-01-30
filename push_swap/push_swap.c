@@ -62,7 +62,7 @@ void	check_if_sorted_and_exit(t_stack	*s, int size)
 	if (--i == size)
 		exit (0);
 }
-/*
+
 int	find_max_index(t_stack *s)
 {
 	t_stack		*ptr;
@@ -72,14 +72,29 @@ int	find_max_index(t_stack *s)
 	max = ptr->index_sorted;
 	while (ptr)
 	{
-		if (ptr->index_sorted > ptr->next->index_sorted)
+		if (ptr->index_sorted > max)
 			max = ptr->index_sorted;
-		else
-			max = ptr->next->index_sorted;
 		ptr = ptr->next;
 	}
+	return (max);
 }
-*/
+
+int	find_min_index(t_stack *s)
+{
+	t_stack		*ptr;
+	int			min;
+
+	ptr = s;
+	min = ptr->index_sorted;
+	while (ptr)
+	{
+		if (ptr->index_sorted < min)
+			min = ptr->index_sorted;
+		ptr = ptr->next;
+	}
+	return (min);
+}
+
 void	sort_three(t_stack **s)
 {
 	t_stack	*middle;
@@ -88,19 +103,19 @@ void	sort_three(t_stack **s)
 	middle = (*s)->next;
 	last = middle->next;
 
-//	max = find_max_index(t_stack *s);
-//	min = find_min_index(t_stack *s);
+	max = find_max_index(*s);
+	min = find_min_index(*s);
 
-	if (middle->index_sorted == 1 && (*s)->index_sorted == 3)
+	if (middle->index_sorted == min && (*s)->index_sorted == max)
 		ft_ra(s);
-	else if (middle->index_sorted == 1 && (*s)->index_sorted == 2)
+	else if (middle->index_sorted == min && last->index_sorted == max)
 		ft_sa(s);
-	else if (last->index_sorted == 1 && (*s)->index_sorted == 3)
+	else if (last->index_sorted == min && (*s)->index_sorted == max)
 	{
 		ft_sa(s);
 		ft_rra(s);
 	}
-	else if (last->index_sorted == 1)
+	else if (last->index_sorted == min)
 		ft_rra(s);
 	else
 	{
@@ -124,14 +139,14 @@ void	short_sorting(t_stack **a)
 	if (size == 3)
 		sort_three(a);
 }
-/*
+
 int	main(int ac, char **av)
 {
 	t_stack		*a;
-	t_stack		*b;
+//	t_stack		*b;
 
 	a = NULL;
-	b = NULL;
+//	b = NULL;
 	if (ac == 1)
 		return (0);
 	av++;
@@ -140,6 +155,9 @@ int	main(int ac, char **av)
 		return (0);
 	short_sorting(&a);
 
+	//TEST INDEX MIN ET MAX
+	ft_printf("INDEX MAX = %d\n", find_max_index(a));
+	ft_printf("INDEX MIN = %d\n", find_min_index(a));
 
 	//tests
 	t_stack	*ptr = a;
@@ -156,7 +174,7 @@ int	main(int ac, char **av)
 		ptr = ptr->next;
 	}
 }
-*/
+
 
 
 
