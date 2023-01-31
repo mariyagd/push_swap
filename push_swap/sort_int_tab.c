@@ -62,25 +62,23 @@ void    sort_index(t_stack **head)
         else
             ptr = ptr->next;
     }
+	free(i_array);
 }
 
-
-
-/*
-void    set_actual_index(t_stack **a)
+void    set_index_position(t_stack **s)
 {
     t_stack *ptr;
     int     i;
 
-    ptr = *a;
-    i = 0;
+    ptr = *s;
+    i = 1;
     while (ptr != NULL)
     {
-        ptr->actual_ind = i;
+        ptr->pos = i;
         i++;
         ptr = ptr->next;
     }
-}*/
+}
 /*
 #include <stdio.h>
 #include <stdlib.h>

@@ -7,17 +7,19 @@
 # define one_str_mult_num 1
 # define one_num 2
 # define multiple_string 3
+# define stack_a	4
+# define stack_b    5	
 
 typedef struct  s_stack
 {
     int                 content;
     int                 index_sorted;
     struct s_stack      *next;
+	int					pos;
 }                       t_stack;
 
 //A SUPPRIMER
-void    print_index(t_stack *a);
-void    print_stack(t_stack *a);
+void	print_message(t_stack *a, t_stack *b);
 /////////////////////////
 ///
 
@@ -33,7 +35,7 @@ bool		one_string_case(char *av);
 int 		string_case(char **av);
 
 //stack a initialization
-t_stack		*create_stack_a(char **av, t_stack **a);
+t_stack		*create_stack_a(char **av, t_stack **a, t_stack **b);
 t_stack 	*find_lastnode(t_stack **head);
 void	    node_backadd(t_stack **head, t_stack **new_node);
 t_stack 	*new_node(char *str);
@@ -42,6 +44,7 @@ t_stack 	*prepare_stack_a(char **av);
 int			stack_size(t_stack *ptr);
 void    	set_actual_index(t_stack **a);
 t_stack 	*find_before_last(t_stack **a);
+void    set_index_position(t_stack **a);
 
 //free string
 void		free_string(char **str);
@@ -52,7 +55,7 @@ void 		sort_int_tab(int **tab, unsigned int size);
 void    	sort_index(t_stack **head);
 
 //check if sorted
-void		check_if_sorted_and_exit(t_stack *s, int	size);
+void	check_if_sorted_and_exit(t_stack *s1, t_stack *s2, int size);
 
 //index max et min
 int			find_max_index(t_stack *s);
@@ -75,4 +78,22 @@ void    	swap_op(t_stack **s);
 void    	ft_sa(t_stack **a);
 void    	ft_sb(t_stack **b);
 void    	ft_ss(t_stack **a, t_stack **b);
+
+
+//median
+int 		find_median(t_stack *s);
+
+//short sorting
+void		sort_three(t_stack **s);
+void		sort_four(t_stack **s1, t_stack **s2);
+void		sort_five(t_stack **s1, t_stack **s2);
+void		short_sorting(t_stack **a, t_stack **b);
+
+void	sort_two(t_stack **s1, t_stack **s2, int i);
+bool	check_if_sorted(t_stack	*s);
+
+//SMALL SORTING
+void	small_sorting(t_stack **s1, t_stack **s2, int size_a);
+
+void	sort_less_than_ten(t_stack **s1, t_stack **s2);
 #endif

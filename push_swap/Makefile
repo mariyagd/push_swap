@@ -22,7 +22,12 @@ SRCS = 			errors_checker.c \
 				push_swap.c \
 				sort_list.c \
 				swap_ops.c \
-				free_ops.c
+				free_ops.c \
+				print_message.c \
+				index_max_min.c \
+				short_sorting.c \
+				median.c \
+				small_sorting.c
 
 
 OBJS = ${SRCS:.c=.o}

@@ -7,9 +7,10 @@ t_stack *new_node(char *str)
     new = malloc(sizeof(t_stack));
     if (!new)
         return (NULL);
-    new->next = NULL;
     new->content = ft_atoi(str);
     new->index_sorted = 0;
+	new->pos = 0;
+    new->next = NULL;
     return (new);
 }
 
@@ -31,7 +32,6 @@ void    node_backadd(t_stack **head, t_stack **new_node)
         lastnode->next = *new_node;
     }
 }
-
 
 t_stack *init_stack_a(char **str)
 {
@@ -59,6 +59,7 @@ t_stack *init_stack_a(char **str)
         i++;
     }
     sort_index(&head);
+	set_index_position(&head);
     return (head);
 }
 
@@ -83,7 +84,7 @@ t_stack *prepare_stack_a(char **av)
     return (a);
 }
 
-t_stack *create_stack_a(char **av, t_stack **a)
+t_stack *create_stack_a(char **av, t_stack **a, t_stack **b)
 {
     char        **str;
     int         str_case;
@@ -105,6 +106,6 @@ t_stack *create_stack_a(char **av, t_stack **a)
         exit(0);
     if (!a)
         return (NULL);
-    check_if_sorted_and_exit(*a, stack_size(*a));
+	check_if_sorted_and_exit(*a, *b, stack_size(*a));
     return (*a);
 }

@@ -3,6 +3,7 @@
 void no_int_errors(char **str)
 {
     char    *s_int_max = "2147483647";
+    char    *s_int_max2 = "+2147483647";
     char    *s_int_min = "-2147483648";
 
     int i;
@@ -20,6 +21,13 @@ void no_int_errors(char **str)
             if (len == 11 && ft_strncmp(s_int_min, str[i], 11) < 0)
                 error_msg_stop();
         }
+		else if (str[i][0] == '+')
+		{
+			if (len > 11)
+				error_msg_stop();
+			if (len == 11 && ft_strncmp(s_int_max2, str[i], 11) < 0)
+				error_msg_stop();
+		}
         else
         {
             if (len > 10)
@@ -65,7 +73,7 @@ void no_other_char(char **str)
         j = 0;
         while(str[i][j] != 0)
         {
-           if (j == 0 && str[i][j] == '-')
+           if (j == 0 && (str[i][j] == '-' || str[i][j] == '+'))
                 j++;
             if (!(str[i][j] >= 48 && str[i][j] <= 57))
                 error_msg_stop();

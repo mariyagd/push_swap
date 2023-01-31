@@ -14,5 +14,5 @@
 void    error_msg_stop(void)
 {
     ft_printf("Error\n");
-    exit(0);
+    exit(1);
 }
