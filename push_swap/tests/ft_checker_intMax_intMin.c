@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <limits.h>
-#include "../my_library/includes/libft.h"
+#include "../libft/includes/libft.h"
 
 // TEST FOR CHECK IF A VALUE IS BIGGER THAN INT_MAX OR SMALLER THAT INT_MIN
 int	main(int argc, char *argv[])
@@ -9,7 +9,7 @@ int	main(int argc, char *argv[])
 	(void)argc;
 	(void)argv;
 	char	*s_int_max = "2147483647";
-	char	*s_int_min = "-2147483647";
+	char	*s_int_min = "-2147483648";
 
 	if (argv[1][0] == '-')
 	{

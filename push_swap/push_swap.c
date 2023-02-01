@@ -6,7 +6,7 @@
 /*   By: mdanchev <mdanchev@42lausanne.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 11:25:10 by mdanchev          #+#    #+#             */
-/*   Updated: 2023/01/30 17:27:25 by mdanchev         ###   lausanne.ch       */
+/*   Updated: 2023/02/01 17:56:20 by mdanchev         ###   lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -40,7 +40,6 @@ void	check_if_sorted_and_exit(t_stack *s1, t_stack *s2, int size)
 		exit (0);
 }
 
-
 int	main(int ac, char **av)
 {
 	t_stack		*a;
@@ -57,22 +56,15 @@ int	main(int ac, char **av)
 	if (!a)
 		return (0);
 	size = stack_size(a);
-	//tests
-//	print_message(a, b);
-	/////
 	if (size >= 2 && size <= 5)
 		short_sorting(&a, &b);
 	if (size >= 6 && size <= 10)
 		sort_less_than_ten(&a, &b);
-	if (size >=11 && size <= 100)
+	if (size >=11 && size <= 500)
 		small_sorting(&a, &b, size);
-	//tests
-//	print_message(a, b);
-	///////
 	check_if_sorted_and_exit(a, b, size);
-//	ft_printf("!!!!!THE STACK DIDN'T SORT CORRECTLY!!!!\n");
 	return (1);
-	
+
 }
 
 

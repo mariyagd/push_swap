@@ -4,74 +4,214 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+BONUS	push_swap_tester/files/includes/utils.h	/^#  define BONUS /;"	d
+BONUS_CHECKER_MAIN	push_swap_tester/files/Makefile	/^BONUS_CHECKER_MAIN = srcs\/bonus\/main.c$/;"	m
+BONUS_CHECKER_MAIN_OBJS	push_swap_tester/files/Makefile	/^BONUS_CHECKER_MAIN_OBJS = $(BONUS_CHECKER_MAIN:.c=.o)$/;"	m
+BONUS_FILES	push_swap_tester/files/Makefile	/^BONUS_FILES = bonus.c$/;"	m
+BONUS_OBJECTS	push_swap_tester/files/libft/Makefile	/^BONUS_OBJECTS = $(BONUS_SRCS:.c=.o)$/;"	m
+BONUS_OBJS	push_swap_tester/files/Makefile	/^BONUS_OBJS = $(BONUS_SRCS:.c=.o)$/;"	m
+BONUS_PATH	push_swap_tester/files/Makefile	/^BONUS_PATH = srcs\/bonus\/$/;"	m
+BONUS_SRCS	push_swap_tester/files/Makefile	/^BONUS_SRCS = $(addprefix $(BONUS_PATH), $(BONUS_FILES))$/;"	m
+BONUS_SRCS	push_swap_tester/files/libft/Makefile	/^BONUS_SRCS = ft_lstadd_back.c	ft_lstadd_front.c\\$/;"	m
 BUFFER_SIZE	libft/includes/get_next_line.h	/^#  define BUFFER_SIZE /;"	d
+BUFFER_SIZE	push_swap_tester/files/libft/get_next_line.h	/^#  define BUFFER_SIZE /;"	d
 CC	Makefile	/^CC		= gcc$/;"	m
 CC	libft/Makefile	/^CC		= gcc$/;"	m
+CC	push_swap_tester/files/Makefile	/^CC = cc$/;"	m
+CC	push_swap_tester/files/libft/Makefile	/^CC = gcc$/;"	m
 CFLAGS	Makefile	/^CFLAGS = -Wall -Wextra -Werror -g -fsanitize=address -fno-omit-frame-pointer$/;"	m
 CFLAGS	libft/Makefile	/^CFLAGS = -Wall -Wextra -Werror$/;"	m
+CFLAGS	push_swap_tester/files/Makefile	/^CFLAGS = -Wall -Werror -Wextra$/;"	m
+CHECKER	push_swap_tester/files/Makefile	/^CHECKER = checker$/;"	m
+CHECKER_BONUS	push_swap_tester/files/Makefile	/^CHECKER_BONUS = checker_bonus$/;"	m
+CHECKER_FILES	push_swap_tester/files/Makefile	/^CHECKER_FILES = check.c$/;"	m
+CHECKER_MAIN	push_swap_tester/files/Makefile	/^CHECKER_MAIN = srcs\/checker\/main.c$/;"	m
+CHECKER_MAIN_OBJS	push_swap_tester/files/Makefile	/^CHECKER_MAIN_OBJS = $(CHECKER_MAIN:.c=.o)$/;"	m
+CHECKER_OBJS	push_swap_tester/files/Makefile	/^CHECKER_OBJS = $(CHECKER_SRCS:.c=.o)$/;"	m
+CHECKER_PATH	push_swap_tester/files/Makefile	/^CHECKER_PATH = srcs\/checker\/$/;"	m
+CHECKER_RADIX	push_swap_tester/files/Makefile	/^CHECKER_RADIX = checker_radix$/;"	m
+CHECKER_SRCS	push_swap_tester/files/Makefile	/^CHECKER_SRCS = $(addprefix $(CHECKER_PATH), $(CHECKER_FILES))$/;"	m
+DEBUG	push_swap_tester/files/includes/utils.h	/^#  define DEBUG /;"	d
+FAST	push_swap_tester/files/gen.cpp	/^#define FAST /;"	d	file:
+FAST	push_swap_tester/files/main.cpp	/^#define FAST /;"	d	file:
+FLAGS	push_swap_tester/files/libft/Makefile	/^FLAGS = -Wall -Wextra -Werror$/;"	m
 FT_PRINTF_H	libft/includes/ft_printf.h	/^# define FT_PRINTF_H$/;"	d
 GET_NEXT_LINE_H	libft/includes/get_next_line.h	/^# define GET_NEXT_LINE_H$/;"	d
+GET_NEXT_LINE_H	push_swap_tester/files/libft/get_next_line.h	/^# define GET_NEXT_LINE_H$/;"	d
+HEADER	push_swap_tester/files/libft/Makefile	/^HEADER = libft.h	get_next_line.h$/;"	m
+INCLUDES	push_swap_tester/files/Makefile	/^INCLUDES = $(INCLUDES_PATH)utils.h$/;"	m
+INCLUDES_PATH	push_swap_tester/files/Makefile	/^INCLUDES_PATH = includes\/$/;"	m
+LIB	push_swap_tester/files/Makefile	/^LIB = $(LIB_PATH)libft.a$/;"	m
 LIBFT_H	libft/includes/libft.h	/^# define LIBFT_H$/;"	d
+LIBFT_H	push_swap_tester/files/libft/libft.h	/^# define LIBFT_H$/;"	d
+LIB_PATH	push_swap_tester/files/Makefile	/^LIB_PATH = libft\/$/;"	m
 NAME	Makefile	/^NAME = push_swap$/;"	m
 NAME	libft/Makefile	/^NAME = libft.a$/;"	m
+NAME	push_swap_tester/files/libft/Makefile	/^NAME = libft.a$/;"	m
+OBJECTS	push_swap_tester/files/libft/Makefile	/^OBJECTS = $(SRCS:.c=.o)$/;"	m
 OBJS	Makefile	/^OBJS = ${SRCS:.c=.o}$/;"	m
 OBJS	libft/Makefile	/^OBJS = ${SRCS_LIBFT:.c=.o} ${SRCS_LSTCHAINE:.c=.o} ${SRCS_PRINTF:.c=.o} ${SRCS_GNL:.c=.o} \\$/;"	m
 PUSH_SWAP_H	push_swap.h	/^# define PUSH_SWAP_H$/;"	d
+RADIX	push_swap_tester/files/includes/utils.h	/^#  define RADIX /;"	d
+RADIX_CHECKER_MAIN	push_swap_tester/files/Makefile	/^RADIX_CHECKER_MAIN = $(RADIX_PATH)main.c$/;"	m
+RADIX_CHECKER_MAIN_OBJS	push_swap_tester/files/Makefile	/^RADIX_CHECKER_MAIN_OBJS = $(RADIX_CHECKER_MAIN:.c=.o)$/;"	m
+RADIX_FILES	push_swap_tester/files/Makefile	/^RADIX_FILES = radix.c$/;"	m
+RADIX_OBJS	push_swap_tester/files/Makefile	/^RADIX_OBJS = $(RADIX_SRCS:.c=.o)$/;"	m
+RADIX_PATH	push_swap_tester/files/Makefile	/^RADIX_PATH = srcs\/radix\/$/;"	m
+RADIX_SRCS	push_swap_tester/files/Makefile	/^RADIX_SRCS = $(addprefix $(RADIX_PATH), $(RADIX_FILES))$/;"	m
 RM	Makefile	/^RM		= rm -f$/;"	m
 RM	libft/Makefile	/^RM		= rm -f$/;"	m
+SHARE_FILES	push_swap_tester/files/Makefile	/^SHARE_FILES = parse.c	utils.c	operation1.c	operation2.c	operation3.c\\$/;"	m
+SHARE_OBJS	push_swap_tester/files/Makefile	/^SHARE_OBJS = $(SHARE_SRCS:.c=.o)$/;"	m
+SHARE_PATH	push_swap_tester/files/Makefile	/^SHARE_PATH = srcs\/share\/$/;"	m
+SHARE_SRCS	push_swap_tester/files/Makefile	/^SHARE_SRCS = $(addprefix $(SHARE_PATH), $(SHARE_FILES))$/;"	m
 SRCS	Makefile	/^SRCS = 			errors_checker.c \\$/;"	m
+SRCS	push_swap_tester/files/libft/Makefile	/^SRCS = ft_split.c	ft_strchr.c \\$/;"	m
 SRCS_GNL	libft/Makefile	/^SRCS_GNL = 			get_next_line\/get_next_line.c \\$/;"	m
 SRCS_LIBFT	libft/Makefile	/^SRCS_LIBFT = 		libft\/ft_memset.c \\$/;"	m
 SRCS_LSTTCHAINE	libft/Makefile	/^SRCS_LSTTCHAINE = 	libft\/ft_lstnew.c \\$/;"	m
 SRCS_PRINTF	libft/Makefile	/^SRCS_PRINTF = 		ft_printf\/ft_printf.c \\$/;"	m
+UTILS_H	push_swap_tester/files/includes/utils.h	/^# define UTILS_H$/;"	d
+assigned_operation	push_swap_tester/files/srcs/share/operation3.c	/^void	assigned_operation(void *ptr, t_deque *stack[2])$/;"	f
+binary_search	push_swap_tester/files/libft/binary_search.c	/^int	binary_search(int *arr, int arr_size, int target)$/;"	f
+bottom	push_swap_tester/files/algo.cpp	/^#define bottom /;"	d	file:
+check	push_swap_tester/files/srcs/checker/check.c	/^int	check(int *arr, int arr_size, t_list *instructions)$/;"	f
 check	tests/test_true_false.c	/^bool check(int a, int b)$/;"	f
+check_bonus	push_swap_tester/files/srcs/bonus/bonus.c	/^void	check_bonus(int *arr, int arr_size, t_list *instructions)$/;"	f
 check_errors	libft/get_next_line/get_next_line.c	/^int	check_errors(int fd, char **line)$/;"	f
-check_if_sorted_and_exit	push_swap.c	/^void	check_if_sorted_and_exit(t_stack	*s, int size)$/;"	f
+check_if_sorted	short_sorting.c	/^bool	check_if_sorted(t_stack	*s)$/;"	f
+check_if_sorted_and_exit	push_swap.c	/^void	check_if_sorted_and_exit(t_stack *s1, t_stack *s2, int size)$/;"	f
+check_instructions	push_swap_tester/files/srcs/share/parse.c	/^void	check_instructions(char *str)$/;"	f
+check_radix	push_swap_tester/files/srcs/radix/radix.c	/^void	check_radix(int *arr, int arr_size, t_list *instructions)$/;"	f
+clear	push_swap_tester/files/libft/libft.h	/^	clear$/;"	e	enum:e_memory
+clearscreen	push_swap_tester/files/algo.cpp	/^void clearscreen()$/;"	f
+clearscreen	push_swap_tester/files/srcs/bonus/bonus.c	/^static void	clearscreen(void)$/;"	f	file:
+clearscreen	push_swap_tester/files/srcs/radix/radix.c	/^static void	clearscreen(void)$/;"	f	file:
 cmp	sort_list.c	/^int cmp(int a, int b)$/;"	f
+confirm	push_swap_tester/basic_test.sh	/^confirm() {$/;"	f
 content	libft/includes/libft.h	/^	void			*content;$/;"	m	struct:s_list
 content	push_swap.h	/^    int                 content;$/;"	m	struct:s_stack
+content	push_swap_tester/files/libft/libft.h	/^	void					*content;$/;"	m	struct:s_double_list
+content	push_swap_tester/files/libft/libft.h	/^	void			*content;$/;"	m	struct:s_list
+convert_base_2	push_swap_tester/files/algo.cpp	/^string convert_base_2(int n)$/;"	f
+count_numbers	save.c	/^int	count_numbers(t_stack *s, int median)$/;"	f
+count_numbers	save_ok.c	/^int	count_numbers(t_stack *s, int median)$/;"	f
+count_numbers	small_sorting.c	/^int	count_numbers(t_stack *s, int median)$/;"	f
 create_nextline	libft/get_next_line/get_next_line.c	/^char	*create_nextline(char *result, char *line)$/;"	f
 create_result	libft/get_next_line/get_next_line.c	/^char	*create_result(char *line)$/;"	f
-create_stack_a	init_stack_a.c	/^t_stack *create_stack_a(char **av, t_stack **a)$/;"	f
+create_stack_a	init_stack_a.c	/^t_stack *create_stack_a(char **av, t_stack **a, t_stack **b)$/;"	f
+deque_clear	push_swap_tester/files/libft/deque_utils.c	/^void	deque_clear(t_deque *deque, void (*f)(void*))$/;"	f
+deque_init	push_swap_tester/files/libft/deque.c	/^t_deque	*deque_init(void)$/;"	f
+deque_pop_back	push_swap_tester/files/libft/deque.c	/^void	deque_pop_back(t_deque *deque, void (*f)(void *))$/;"	f
+deque_pop_front	push_swap_tester/files/libft/deque.c	/^void	deque_pop_front(t_deque *deque, void (*f)(void*))$/;"	f
+deque_push_back	push_swap_tester/files/libft/deque.c	/^void	deque_push_back(t_deque *deque, void *ptr)$/;"	f
+deque_push_front	push_swap_tester/files/libft/deque.c	/^void	deque_push_front(t_deque *deque, void *ptr)$/;"	f
+display_number_width11	push_swap_tester/files/srcs/share/operation4.c	/^static void	display_number_width11(int num)$/;"	f	file:
+display_number_width11_base2	push_swap_tester/files/srcs/radix/radix.c	/^static void	display_number_width11_base2(int num)$/;"	f	file:
+display_stack_radix	push_swap_tester/files/srcs/radix/radix.c	/^void	display_stack_radix(t_deque *stack[2], char *message)$/;"	f
+display_stacks	push_swap_tester/files/srcs/share/operation4.c	/^void	display_stacks(t_deque *stack[2], char *message)$/;"	f
+do_ra	push_swap.h	/^# define do_ra	/;"	d
+do_rra	push_swap.h	/^# define do_rra	/;"	d
+do_rrb	push_swap.h	/^# define do_rrb	/;"	d
+double_list_init	push_swap_tester/files/libft/deque_utils.c	/^t_double_list	*double_list_init(void *ptr)$/;"	f
+e_memory	push_swap_tester/files/libft/libft.h	/^typedef enum e_memory$/;"	g
+error_exit	push_swap_tester/files/srcs/share/utils.c	/^void	error_exit(void)$/;"	f
 error_msg_stop	error_msg.c	/^void    error_msg_stop(void)$/;"	f
+fd	push_swap_tester/files/libft/get_next_line.h	/^	int				fd;$/;"	m	struct:s_lst
 find_lastnode	nodes_ops.c	/^t_stack *find_lastnode(t_stack **head)$/;"	f
-find_max_index	tests/test_max_min_index.c	/^int find_max_index(t_stack *s)$/;"	f
+find_max_index	index_max_min.c	/^int	find_max_index(t_stack *s)$/;"	f
+find_median	median.c	/^int find_median(t_stack *s)$/;"	f
+find_min_index	index_max_min.c	/^int	find_min_index(t_stack *s)$/;"	f
+find_pos	save.c	/^int	find_pos(t_stack *s, int min)$/;"	f
+find_pos	save_ok.c	/^int	find_pos(t_stack *s, int min)$/;"	f
+find_pos	small_sorting.c	/^int	find_pos(t_stack *s, int min)$/;"	f
+first_condition	small_sorting.c	/^void	first_condition(t_stack **s1, t_stack **s2, int median, int *i)$/;"	f
 free_list	free_ops.c	/^void    free_list(t_stack **s)$/;"	f
 free_string	free_ops.c	/^void    free_string(char **str)$/;"	f
 frontadd_push_op	push_ops.c	/^void	frontadd_push_op(t_stack **s1, t_stack **s2)$/;"	f
 ft_abs	libft/libft/ft_itoa_base.c	/^int		ft_abs(int nb)$/;"	f
+ft_ascending	push_swap_tester/files/libft/ft_sort.c	/^int	ft_ascending(int a, int b)$/;"	f
 ft_atoi	libft/libft/ft_atoi.c	/^int	ft_atoi(const char *str)$/;"	f
+ft_atoi	push_swap_tester/files/libft/ft_atoi.c	/^int	ft_atoi(char *str)$/;"	f
 ft_atoi_base	libft/libft/ft_atoi_base.c	/^int	ft_atoi_base(const char *str, int str_base)$/;"	f
+ft_atoi_with_range	push_swap_tester/files/srcs/share/utils.c	/^int	ft_atoi_with_range(char **str)$/;"	f
 ft_bzero	libft/libft/ft_bzero.c	/^void	ft_bzero(void *s, size_t n)$/;"	f
+ft_bzero	push_swap_tester/files/libft/ft_bzero.c	/^void	ft_bzero(void *s, size_t n)$/;"	f
 ft_calloc	libft/libft/ft_calloc.c	/^void	*ft_calloc(size_t count, size_t size)$/;"	f
+ft_calloc	push_swap_tester/files/libft/ft_calloc.c	/^void	*ft_calloc(size_t elementcount, size_t elementsize)$/;"	f
+ft_calloc_2	push_swap_tester/files/libft/ft_memory.c	/^static void	*ft_calloc_2(size_t elementcount, size_t elementsize)$/;"	f	file:
 ft_calloc_count	libft/get_next_line/get_next_line_utils.c	/^char	*ft_calloc_count(int count)$/;"	f
+ft_check	push_swap_tester/files/libft/get_next_line.c	/^static int	ft_check(t_lst *temp, char **line, t_lst *save)$/;"	f	file:
+ft_clean_lst	push_swap_tester/files/libft/get_next_line_utils.c	/^int	ft_clean_lst(t_lst *lst)$/;"	f
+ft_cnt	push_swap_tester/files/libft/ft_itoa.c	/^static int	ft_cnt(int n)$/;"	f	file:
+ft_cnt	push_swap_tester/files/libft/ft_split.c	/^static int	ft_cnt(char const *s, char c)$/;"	f	file:
 ft_count_int	libft/ft_printf/ft_count_int.c	/^int	ft_count_int(int n)$/;"	f
 ft_count_nbchar	libft/libft/ft_itoa.c	/^size_t	ft_count_nbchar(int n)$/;"	f
 ft_count_nbsubstr	libft/libft/ft_split.c	/^size_t	ft_count_nbsubstr(const char *s, char c)$/;"	f
 ft_count_unsigned_int	libft/ft_printf/ft_count_unsigned_int.c	/^int	ft_count_unsigned_int(unsigned int n)$/;"	f
+ft_deep	push_swap_tester/files/libft/ft_sort.c	/^static void	ft_deep(int *arr, int index, int nbr, int (*cmp)(int, int))$/;"	f	file:
+ft_del_lst	push_swap_tester/files/libft/get_next_line_sub.c	/^int	ft_del_lst(t_lst *target, t_lst **head, int *res)$/;"	f
+ft_descending	push_swap_tester/files/libft/ft_sort.c	/^int	ft_descending(int a, int b)$/;"	f
+ft_end	push_swap_tester/files/libft/get_next_line.c	/^static int	ft_end(char **line, t_lst *temp, int res, char *buff)$/;"	f	file:
+ft_fill	push_swap_tester/files/libft/get_next_line.c	/^static int	ft_fill(char **line, t_lst *temp)$/;"	f	file:
 ft_format_specifier	libft/ft_printf/ft_printf.c	/^void	ft_format_specifier(char format, va_list ap, int *count)$/;"	f
+ft_free	push_swap_tester/files/libft/ft_memory_utils.c	/^void	ft_free(void *del)$/;"	f
+ft_free_all	push_swap_tester/files/libft/ft_memory_utils.c	/^void	ft_free_all(void)$/;"	f
+ft_free_sub	push_swap_tester/files/libft/ft_split.c	/^static char	**ft_free_sub(char **ans)$/;"	f	file:
+ft_gnl	push_swap_tester/files/libft/get_next_line.c	/^static void	ft_gnl(int *res, char *buff, char **line, t_lst *temp)$/;"	f	file:
 ft_isalnum	libft/libft/ft_isalnum.c	/^int	ft_isalnum(int c)$/;"	f
+ft_isalnum	push_swap_tester/files/libft/ft_isalnum.c	/^int	ft_isalnum(int c)$/;"	f
 ft_isalpha	libft/libft/ft_isalpha.c	/^int	ft_isalpha(int c)$/;"	f
+ft_isalpha	push_swap_tester/files/libft/ft_isalpha.c	/^int	ft_isalpha(int c)$/;"	f
 ft_isascii	libft/libft/ft_isascii.c	/^int	ft_isascii(int c)$/;"	f
+ft_isascii	push_swap_tester/files/libft/ft_isascii.c	/^int	ft_isascii(int c)$/;"	f
 ft_isdigit	libft/libft/ft_isdigit.c	/^int	ft_isdigit(int c)$/;"	f
+ft_isdigit	push_swap_tester/files/libft/ft_isdigit.c	/^int	ft_isdigit(int c)$/;"	f
 ft_isprint	libft/libft/ft_isprint.c	/^int	ft_isprint(int c)$/;"	f
+ft_isprint	push_swap_tester/files/libft/ft_isprint.c	/^int	ft_isprint(int c)$/;"	f
+ft_isspace	push_swap_tester/files/libft/ft_isspace.c	/^int	ft_isspace(char c)$/;"	f
 ft_itoa	libft/libft/ft_itoa.c	/^char	*ft_itoa(int n)$/;"	f
+ft_itoa	push_swap_tester/files/libft/ft_itoa.c	/^char	*ft_itoa(int n)$/;"	f
 ft_itoa_base	libft/libft/ft_itoa_base.c	/^char	*ft_itoa_base(int value, int base)$/;"	f
 ft_join	libft/get_next_line/get_next_line_utils.c	/^char	*ft_join(char *line, char *buffer)$/;"	f
+ft_lst_add	push_swap_tester/files/libft/get_next_line_utils.c	/^t_lst	*ft_lst_add(t_lst **dst, int fd)$/;"	f
 ft_lstadd_back	libft/libft/ft_lstadd_back.c	/^void	ft_lstadd_back(t_list **lst, t_list *new)$/;"	f
+ft_lstadd_back	push_swap_tester/files/libft/ft_lstadd_back.c	/^int	ft_lstadd_back(t_list **lst, t_list *new)$/;"	f
 ft_lstadd_front	libft/libft/ft_lstadd_front.c	/^void	ft_lstadd_front(t_list **lst, t_list *new)$/;"	f
+ft_lstadd_front	push_swap_tester/files/libft/ft_lstadd_front.c	/^int	ft_lstadd_front(t_list **lst, t_list *new)$/;"	f
 ft_lstclear	libft/libft/ft_lstclear.c	/^void	ft_lstclear(t_list **lst, void (*del)(void*))$/;"	f
+ft_lstclear	push_swap_tester/files/libft/ft_lstclear.c	/^void	ft_lstclear(t_list **lst, void (*del)(void *))$/;"	f
+ft_lstclear_2	push_swap_tester/files/libft/ft_memory.c	/^static void	ft_lstclear_2(t_list **lst, void (*del)(void *))$/;"	f	file:
 ft_lstdelone	libft/libft/ft_lstdelone.c	/^void	ft_lstdelone(t_list *lst, void (*del)(void*))$/;"	f
+ft_lstdelone	push_swap_tester/files/libft/ft_lstdelone.c	/^void	ft_lstdelone(t_list **head, t_list *lst, void (*del)(void *))$/;"	f
+ft_lstdelone_2	push_swap_tester/files/libft/ft_memory.c	/^static void	ft_lstdelone_2(t_list **head, t_list *lst, void (*del)(void *))$/;"	f	file:
+ft_lstfind	push_swap_tester/files/libft/ft_lstfind.c	/^t_list	*ft_lstfind(t_list *head, void *target)$/;"	f
 ft_lstiter	libft/libft/ft_lstiter.c	/^void	ft_lstiter(t_list *lst, void (*f)(void *))$/;"	f
+ft_lstiter	push_swap_tester/files/libft/ft_lstiter.c	/^void	ft_lstiter(t_list *lst, void (*f)(void *))$/;"	f
 ft_lstlast	libft/libft/ft_lstlast.c	/^t_list	*ft_lstlast(t_list *lst)$/;"	f
+ft_lstlast	push_swap_tester/files/libft/ft_lstlast.c	/^t_list	*ft_lstlast(t_list *lst)$/;"	f
 ft_lstmap	libft/libft/ft_lstmap.c	/^t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))$/;"	f
+ft_lstmap	push_swap_tester/files/libft/ft_lstmap.c	/^t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))$/;"	f
 ft_lstnew	libft/libft/ft_lstnew.c	/^t_list	*ft_lstnew(void *content)$/;"	f
+ft_lstnew	push_swap_tester/files/libft/ft_lstnew.c	/^t_list	*ft_lstnew(void *content)$/;"	f
+ft_lstnew_2	push_swap_tester/files/libft/ft_memory.c	/^static t_list	*ft_lstnew_2(void *content)$/;"	f	file:
 ft_lstsize	libft/libft/ft_lstsize.c	/^int	ft_lstsize(t_list *lst)$/;"	f
+ft_lstsize	push_swap_tester/files/libft/ft_lstsize.c	/^int	ft_lstsize(t_list *lst)$/;"	f
+ft_malloc	push_swap_tester/files/libft/ft_memory_utils.c	/^void	*ft_malloc(size_t elem_cnt, size_t elem_size)$/;"	f
+ft_max	push_swap_tester/files/libft/ft_minmax.c	/^int	ft_max(int a, int b)$/;"	f
+ft_memccpy	push_swap_tester/files/libft/ft_memccpy.c	/^void	*ft_memccpy(void *dest, const void *src, int c, size_t n)$/;"	f
 ft_memchr	libft/libft/ft_memchr.c	/^void	*ft_memchr(const void *s, int c, size_t n)$/;"	f
+ft_memchr	push_swap_tester/files/libft/ft_memchr.c	/^void	*ft_memchr(const void *s, int c, size_t n)$/;"	f
 ft_memcmp	libft/libft/ft_memcmp.c	/^int	ft_memcmp(const void *s1, const void *s2, size_t n)$/;"	f
+ft_memcmp	push_swap_tester/files/libft/ft_memcmp.c	/^int	ft_memcmp(const void *s1, const void *s2, size_t n)$/;"	f
 ft_memcpy	libft/libft/ft_memcpy.c	/^void	*ft_memcpy(void *dst, const void *src, size_t n)$/;"	f
+ft_memcpy	push_swap_tester/files/libft/ft_memcpy.c	/^void	*ft_memcpy(void *destination, const void *source, size_t size)$/;"	f
 ft_memmove	libft/libft/ft_memmove.c	/^void	*ft_memmove(void *dst, const void *src, size_t len)$/;"	f
+ft_memmove	push_swap_tester/files/libft/ft_memmove.c	/^void	*ft_memmove(void *dest, const void *src, size_t n)$/;"	f
+ft_memory	push_swap_tester/files/libft/ft_memory.c	/^void	*ft_memory(size_t elem_cnt,$/;"	f
 ft_memset	libft/libft/ft_memset.c	/^void	*ft_memset(void *b, int c, size_t len)$/;"	f
+ft_memset	push_swap_tester/files/libft/ft_memset.c	/^void	*ft_memset(void *b, int c, size_t len)$/;"	f
+ft_min	push_swap_tester/files/libft/ft_minmax.c	/^int	ft_min(int a, int b)$/;"	f
 ft_nb_char_substr	libft/libft/ft_split.c	/^unsigned int	ft_nb_char_substr(char const *s, char c, unsigned int start)$/;"	f
 ft_nb_is_negative	libft/libft/ft_itoa.c	/^char	*ft_nb_is_negative(int n, char *itoa_str, size_t nb_char)$/;"	f
 ft_nb_is_positive	libft/libft/ft_itoa.c	/^char	*ft_nb_is_positive(int n, char *itoa_str, size_t nb_char)$/;"	f
@@ -89,9 +229,13 @@ ft_put_int	libft/ft_printf/ft_put_int.c	/^int	ft_put_int(int n, int fd, int *cou
 ft_put_uintptr_fd	libft/ft_printf/ft_printf_address.c	/^void	ft_put_uintptr_fd(uintptr_t n, int fd, int *count)$/;"	f
 ft_put_unsnbr_fd	libft/ft_printf/ft_put_unsnbr_fd.c	/^void	ft_put_unsnbr_fd(unsigned int n, int fd)$/;"	f
 ft_putchar_fd	libft/libft/ft_putchar_fd.c	/^void	ft_putchar_fd(char c, int fd)$/;"	f
+ft_putchar_fd	push_swap_tester/files/libft/ft_putchar_fd.c	/^void	ft_putchar_fd(char c, int fd)$/;"	f
 ft_putendl_fd	libft/libft/ft_putendl_fd.c	/^void	ft_putendl_fd(char *s, int fd)$/;"	f
+ft_putendl_fd	push_swap_tester/files/libft/ft_putendl_fd.c	/^void	ft_putendl_fd(char *s, int fd)$/;"	f
 ft_putnbr_fd	libft/libft/ft_putnbr_fd.c	/^void	ft_putnbr_fd(int n, int fd)$/;"	f
+ft_putnbr_fd	push_swap_tester/files/libft/ft_putnbr_fd.c	/^void	ft_putnbr_fd(int n, int fd)$/;"	f
 ft_putstr_fd	libft/libft/ft_putstr_fd.c	/^void	ft_putstr_fd(char *s, int fd)$/;"	f
+ft_putstr_fd	push_swap_tester/files/libft/ft_putstr_fd.c	/^void	ft_putstr_fd(char *s, int fd)$/;"	f
 ft_ra	rotate_ops.c	/^void	ft_ra(t_stack **a)$/;"	f
 ft_rb	rotate_ops.c	/^void	ft_rb(t_stack **b)$/;"	f
 ft_rr	rotate_ops.c	/^void	ft_rr(t_stack **a, t_stack **b)$/;"	f
@@ -100,32 +244,78 @@ ft_rrb	rev_rotate_ops.c	/^void	ft_rrb(t_stack **b)$/;"	f
 ft_rrr	rev_rotate_ops.c	/^void	ft_rrr(t_stack **a, t_stack **b)$/;"	f
 ft_sa	swap_ops.c	/^void	ft_sa(t_stack **a)$/;"	f
 ft_sb	swap_ops.c	/^void	ft_sb(t_stack **b)$/;"	f
+ft_sort	push_swap_tester/files/libft/ft_sort.c	/^void	ft_sort(int *head, int *tail, int (*cmp)(int, int))$/;"	f
 ft_split	libft/libft/ft_split.c	/^char	**ft_split(char const *s, char c)$/;"	f
+ft_split	push_swap_tester/files/libft/ft_split.c	/^char	**ft_split(char const *s, char c)$/;"	f
+ft_sqrt	push_swap_tester/files/libft/ft_sqrt.c	/^int	ft_sqrt(int n)$/;"	f
 ft_ss	swap_ops.c	/^void	ft_ss(t_stack **a, t_stack **b)$/;"	f
 ft_start_index_substr	libft/libft/ft_split.c	/^unsigned int	ft_start_index_substr(char const *s, char c, unsigned int start)$/;"	f
+ft_str_add	push_swap_tester/files/libft/get_next_line_utils.c	/^int	ft_str_add(t_lst *dst, char *s, int len)$/;"	f
+ft_strcat	push_swap_tester/files/libft/ft_strlcat.c	/^void	ft_strcat(char *s1, char *s2)$/;"	f
 ft_strchr	libft/libft/ft_strchr.c	/^char	*ft_strchr(const char *s, int c)$/;"	f
+ft_strchr	push_swap_tester/files/libft/ft_strchr.c	/^char	*ft_strchr(const char *s, int c)$/;"	f
 ft_strcpy	libft/libft/ft_strcpy.c	/^char	*ft_strcpy(char *dst, const char *src)$/;"	f
 ft_strdup	libft/libft/ft_strdup.c	/^char	*ft_strdup(const char *s1)$/;"	f
+ft_strdup	push_swap_tester/files/libft/ft_strdup.c	/^char	*ft_strdup(const char *source)$/;"	f
 ft_striteri	libft/libft/ft_striteri.c	/^void	ft_striteri(char *s, void (*f)(unsigned int, char*))$/;"	f
 ft_strjoin	libft/libft/ft_strjoin.c	/^char	*ft_strjoin(char const *s1, char const *s2)$/;"	f
+ft_strjoin	push_swap_tester/files/libft/ft_strjoin.c	/^char	*ft_strjoin(char const *s1, char const *s2)$/;"	f
 ft_strlcat	libft/libft/ft_strlcat.c	/^size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)$/;"	f
+ft_strlcat	push_swap_tester/files/libft/ft_strlcat.c	/^size_t	ft_strlcat(char *s1, const char *s2, size_t n)$/;"	f
 ft_strlcpy	libft/libft/ft_strlcpy.c	/^size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)$/;"	f
+ft_strlcpy	push_swap_tester/files/libft/ft_strlcpy.c	/^size_t	ft_strlcpy(char *dst, const char *src, size_t size)$/;"	f
 ft_strlen	libft/libft/ft_strlen.c	/^size_t	ft_strlen(const char *s)$/;"	f
+ft_strlen	push_swap_tester/files/libft/ft_strlen.c	/^size_t	ft_strlen(const char *s)$/;"	f
 ft_strlen_int	libft/get_next_line/get_next_line_utils.c	/^int	ft_strlen_int(const char *string)$/;"	f
 ft_strmapi	libft/libft/ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))$/;"	f
+ft_strmapi	push_swap_tester/files/libft/ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))$/;"	f
 ft_strncmp	libft/libft/ft_strncmp.c	/^int	ft_strncmp(const char *s1, const char *s2, size_t n)$/;"	f
+ft_strncmp	push_swap_tester/files/libft/ft_strncmp.c	/^int	ft_strncmp(const char *ss1, const char *ss2, size_t n)$/;"	f
 ft_strncpy	libft/libft/ft_strncpy.c	/^char	*ft_strncpy(char *dst, const char *src, size_t len)$/;"	f
 ft_strnstr	libft/libft/ft_strnstr.c	/^char	*ft_strnstr(const char *haystack, const char *needle, size_t len)$/;"	f
+ft_strnstr	push_swap_tester/files/libft/ft_strnstr.c	/^char	*ft_strnstr(const char *h, const char *needle, size_t len)$/;"	f
 ft_strrchr	libft/libft/ft_strrchr.c	/^char	*ft_strrchr(const char *s, int c)$/;"	f
+ft_strrchr	push_swap_tester/files/libft/ft_strrchr.c	/^char	*ft_strrchr(const char *s, int c)$/;"	f
 ft_strtrim	libft/libft/ft_strtrim.c	/^char	*ft_strtrim(char const *s1, char const *set)$/;"	f
+ft_strtrim	push_swap_tester/files/libft/ft_strtrim.c	/^char	*ft_strtrim(char const *s1, char const *set)$/;"	f
+ft_sub	push_swap_tester/files/libft/ft_split.c	/^static int	ft_sub(char **ans, const char *s, int *ct)$/;"	f	file:
+ft_sub	push_swap_tester/files/libft/get_next_line_utils.c	/^static int	ft_sub(t_lst *dst, t_str *str, int len)$/;"	f	file:
 ft_substr	libft/libft/ft_substr.c	/^char	*ft_substr(char const *s, unsigned int start, size_t len)$/;"	f
+ft_substr	push_swap_tester/files/libft/ft_substr.c	/^char	*ft_substr(char const *s, size_t start, size_t len)$/;"	f
+ft_swap	push_swap_tester/files/libft/ft_sort.c	/^static void	ft_swap(int *a, int *b)$/;"	f	file:
 ft_tolower	libft/libft/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f
+ft_tolower	push_swap_tester/files/libft/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f
 ft_toupper	libft/libft/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f
+ft_toupper	push_swap_tester/files/libft/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f
+g_size	push_swap_tester/files/includes/utils.h	/^int				g_size;$/;"	v
+get_nbr_in_line	push_swap_tester/files/srcs/share/parse.c	/^int	get_nbr_in_line(int **arr, int argc, char **argv)$/;"	f
 get_next_line	libft/get_next_line/get_next_line.c	/^char	*get_next_line(int fd)$/;"	f
+get_next_line	push_swap_tester/files/libft/get_next_line.c	/^int	get_next_line(int fd, char **line)$/;"	f
 get_next_line_maxopen	libft/get_next_line/get_next_line_bonus.c	/^char	*get_next_line_maxopen(int fd)$/;"	f
+has_duplicate	push_swap_tester/files/srcs/share/parse.c	/^int	has_duplicate(int *arr, int arrsize)$/;"	f
+head	push_swap_tester/files/libft/libft.h	/^	struct s_double_list	*head;$/;"	m	struct:s_deque	typeref:struct:s_deque::s_double_list
+helper	save_ok.c	/^int	helper(t_stack *s, int ind_search)$/;"	f
+helper	small_sorting.c	/^int	helper(t_stack *s, int ind_search)$/;"	f
+helper_function	save.c	/^int	helper_function(t_stack *s, int median)$/;"	f
+helper_function	save_ok.c	/^int	helper_function(t_stack *s, int median)$/;"	f
+helper_function	small_sorting.c	/^int	helper_function(t_stack *s, int median)$/;"	f
+helper_function_two	save.c	/^int	helper_function_two(t_stack *s, int median)$/;"	f
+idx	push_swap_tester/files/libft/get_next_line.h	/^	int				idx;$/;"	m	struct:s_lst
 index_sorted	push_swap.h	/^    int                 index_sorted;$/;"	m	struct:s_stack
+init_stack	push_swap_tester/files/srcs/share/operation3.c	/^void	init_stack(t_deque *stack, int *arr, int arr_size)$/;"	f
 init_stack_a	init_stack_a.c	/^t_stack *init_stack_a(char **str)$/;"	f
+ko	push_swap_tester/files/srcs/bonus/bonus.c	/^static void	ko(void)$/;"	f	file:
+ko	push_swap_tester/files/srcs/radix/radix.c	/^static void	ko(void)$/;"	f	file:
+last	push_swap_tester/files/libft/libft.h	/^	struct s_double_list	*last;$/;"	m	struct:s_double_list	typeref:struct:s_double_list::s_double_list
+len	push_swap_tester/files/libft/get_next_line.h	/^	int				len;$/;"	m	struct:s_lst
 main	libft/test.c	/^int	main(void)$/;"	f
+main	push_swap.c	/^int	main(int ac, char **av)$/;"	f
+main	push_swap_tester/files/algo.cpp	/^int main(int ac, char **av)$/;"	f
+main	push_swap_tester/files/gen.cpp	/^int main(int ac, char **av)$/;"	f
+main	push_swap_tester/files/main.cpp	/^int main(int ac, char **av)$/;"	f
+main	push_swap_tester/files/srcs/bonus/main.c	/^int	main(int argc, char **argv)$/;"	f
+main	push_swap_tester/files/srcs/checker/main.c	/^int	main(int argc, char **argv)$/;"	f
+main	push_swap_tester/files/srcs/radix/main.c	/^int	main(int argc, char **argv)$/;"	f
 main	tests/check_for_doubles.c	/^int	main(int argc, char *argv[])$/;"	f
 main	tests/ft_checker_intMax_intMin.c	/^int	main(int argc, char *argv[])$/;"	f
 main	tests/ft_printf_test.c	/^int main(void)$/;"	f
@@ -134,43 +324,113 @@ main	tests/test_atoi.c	/^int	main(int ac, char **av)$/;"	f
 main	tests/test_binary.c	/^int	main(int ac, char **av)$/;"	f
 main	tests/test_ft_atoi_base.c	/^int	main(int ac, char **av)$/;"	f
 main	tests/test_ft_printf.c	/^int	main(void)$/;"	f
-main	tests/test_max_min_index.c	/^int	main(int ac, char **av)$/;"	f
 main	tests/test_operations.c	/^int	main(int ac, char*av[])$/;"	f
 main	tests/test_true_false.c	/^int	main(void)$/;"	f
 max	libft/libft/max.c	/^int	max(int *tab, unsigned int len)$/;"	f
+max_bits	push_swap_tester/files/algo.cpp	/^int max_bits = 4;$/;"	v
+median_small_sort	save.c	/^int	median_small_sort(t_stack *s)$/;"	f
+median_small_sort	save_ok.c	/^int	median_small_sort(t_stack *s)$/;"	f
+median_small_sort	small_sorting.c	/^int	median_small_sort(t_stack *s, int size_a)$/;"	f
 multiple_string	push_swap.h	/^# define multiple_string /;"	d
 new_node	init_stack_a.c	/^t_stack *new_node(char *str)$/;"	f
 next	libft/includes/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
 next	push_swap.h	/^    struct s_stack      *next;$/;"	m	struct:s_stack	typeref:struct:s_stack::s_stack
+next	push_swap_tester/files/libft/get_next_line.h	/^	struct s_lst	*next;$/;"	m	struct:s_lst	typeref:struct:s_lst::s_lst
+next	push_swap_tester/files/libft/get_next_line.h	/^	struct s_str	*next;$/;"	m	struct:s_str	typeref:struct:s_str::s_str
+next	push_swap_tester/files/libft/libft.h	/^	struct s_double_list	*next;$/;"	m	struct:s_double_list	typeref:struct:s_double_list::s_double_list
+next	push_swap_tester/files/libft/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
 no_doubles	errors_checker.c	/^void no_doubles(char **str)$/;"	f
 no_errors	errors_checker.c	/^void no_errors(char **str)$/;"	f
 no_int_errors	errors_checker.c	/^void no_int_errors(char **str)$/;"	f
 no_other_char	errors_checker.c	/^void no_other_char(char **str)$/;"	f
 node_backadd	init_stack_a.c	/^void    node_backadd(t_stack **head, t_stack **new_node)$/;"	f
+norm	push_swap_tester/files/libft/ft_split.c	/^static void	norm(int *ct)$/;"	f	file:
+normal_exit	push_swap_tester/files/srcs/share/utils.c	/^void	normal_exit(void)$/;"	f
+ok	push_swap_tester/files/srcs/bonus/bonus.c	/^static void	ok(t_list *instructions)$/;"	f	file:
+ok	push_swap_tester/files/srcs/radix/radix.c	/^static void	ok(t_list *instructions)$/;"	f	file:
 one_num	push_swap.h	/^# define one_num /;"	d
 one_str_mult_num	push_swap.h	/^# define one_str_mult_num /;"	d
 one_string_case	prepare_string.c	/^bool one_string_case(char *av)$/;"	f
+pa	push_swap_tester/files/algo.cpp	/^void pa()$/;"	f
+pa	push_swap_tester/files/srcs/share/operation1.c	/^void	pa(t_deque *stack[2])$/;"	f
+pb	push_swap_tester/files/algo.cpp	/^void pb()$/;"	f
+pb	push_swap_tester/files/srcs/share/operation1.c	/^void	pb(t_deque *stack[2])$/;"	f
+pop	push_swap_tester/files/libft/libft.h	/^	pop,$/;"	e	enum:e_memory
+pop_bottom	push_swap_tester/files/algo.cpp	/^#define pop_bottom /;"	d	file:
+pop_top	push_swap_tester/files/algo.cpp	/^#define pop_top /;"	d	file:
+pos	push_swap.h	/^	int					pos;$/;"	m	struct:s_stack
 power	libft/libft/power.c	/^int	power(int str_base, int power)$/;"	f
 prepare_forstash	libft/get_next_line/get_next_line_utils.c	/^void	prepare_forstash(char **line, char **buffer)$/;"	f
-prepare_stack_a	init_stack_a.c	/^t_stack *prepare_stack_a(char **av)$/;"	f
-print_index	push_swap.c	/^void	print_index(t_stack *a)$/;"	f
+print_message	print_message.c	/^void	print_message(t_stack *a, t_stack *b)$/;"	f
 print_message	tests/test_operations.c	/^void	print_message(t_stack *a, t_stack *b)$/;"	f
-print_stack	push_swap.c	/^void	print_stack(t_stack *a)$/;"	f
+print_stacks	push_swap_tester/files/algo.cpp	/^void print_stacks()$/;"	f
+print_stacks_base2	push_swap_tester/files/algo.cpp	/^void print_stacks_base2()$/;"	f
+push	push_swap_tester/files/libft/libft.h	/^	push,$/;"	e	enum:e_memory
+push_bottom	push_swap_tester/files/algo.cpp	/^#define push_bottom /;"	d	file:
 push_op	push_ops.c	/^void	push_op(t_stack **s1, t_stack **s2)$/;"	f
+push_top	push_swap_tester/files/algo.cpp	/^#define push_top /;"	d	file:
+put_in_list	push_swap_tester/files/srcs/share/parse.c	/^static void	put_in_list(t_list **lst, char *str)$/;"	f	file:
+ra	push_swap_tester/files/algo.cpp	/^void ra()$/;"	f
+ra	push_swap_tester/files/srcs/share/operation2.c	/^void	ra(t_deque *stack[2])$/;"	f
+rb	push_swap_tester/files/srcs/share/operation2.c	/^void	rb(t_deque *stack[2])$/;"	f
 read_fd	libft/get_next_line/get_next_line.c	/^char	*read_fd(char *line, int fd, int *error)$/;"	f
 rev_rotate	rev_rotate_ops.c	/^void	rev_rotate(t_stack **s)$/;"	f
 rotate_op	rotate_ops.c	/^void	rotate_op(t_stack **s)$/;"	f
+rr	push_swap_tester/files/srcs/share/operation2.c	/^void	rr(t_deque *stack[2])$/;"	f
+rra	push_swap_tester/files/srcs/share/operation2.c	/^void	rra(t_deque *stack[2])$/;"	f
+rrb	push_swap_tester/files/srcs/share/operation2.c	/^void	rrb(t_deque *stack[2])$/;"	f
+rrr	push_swap_tester/files/srcs/share/operation3.c	/^void	rrr(t_deque *stack[2])$/;"	f
+s	push_swap_tester/files/libft/get_next_line.h	/^	char			*s;$/;"	m	struct:s_str
+s_deque	push_swap_tester/files/libft/libft.h	/^typedef struct s_deque$/;"	s
+s_double_list	push_swap_tester/files/libft/libft.h	/^typedef struct s_double_list$/;"	s
 s_list	libft/includes/libft.h	/^typedef struct s_list$/;"	s
+s_list	push_swap_tester/files/libft/libft.h	/^typedef struct s_list$/;"	s
+s_lst	push_swap_tester/files/libft/get_next_line.h	/^typedef struct s_lst$/;"	s
 s_stack	push_swap.h	/^typedef struct  s_stack$/;"	s
-short_sorting	push_swap.c	/^void	short_sorting(t_stack **a)$/;"	f
+s_str	push_swap_tester/files/libft/get_next_line.h	/^typedef struct s_str$/;"	s
+sa	push_swap_tester/files/srcs/share/operation1.c	/^void	sa(t_deque *stack[2])$/;"	f
+sb	push_swap_tester/files/srcs/share/operation1.c	/^void	sb(t_deque *stack[2])$/;"	f
+set_index_position	sort_int_tab.c	/^void    set_index_position(t_stack **s)$/;"	f
+short_sorting	short_sorting.c	/^void	short_sorting(t_stack **a, t_stack **b)$/;"	f
+size	push_swap_tester/files/libft/libft.h	/^	int						size;$/;"	m	struct:s_deque
+small_sorting	save.c	/^void	small_sorting(t_stack **s1, t_stack **s2, int size_a)$/;"	f
+small_sorting	save_ok.c	/^void	small_sorting(t_stack **s1, t_stack **s2, int size_a)$/;"	f
+small_sorting	small_sorting.c	/^void	small_sorting(t_stack **s1, t_stack **s2, int size_a)$/;"	f
+sort_five	short_sorting.c	/^void	sort_five(t_stack **s1, t_stack **s2)$/;"	f
+sort_four	short_sorting.c	/^void	sort_four(t_stack **s1, t_stack **s2)$/;"	f
 sort_index	sort_int_tab.c	/^void    sort_index(t_stack **head)$/;"	f
 sort_int_tab	sort_int_tab.c	/^void sort_int_tab(int **tab, unsigned int size)$/;"	f
+sort_less_than_ten	save.c	/^void	sort_less_than_ten(t_stack **s1, t_stack **s2)$/;"	f
+sort_less_than_ten	save_ok.c	/^void	sort_less_than_ten(t_stack **s1, t_stack **s2)$/;"	f
+sort_less_than_ten	small_sorting.c	/^void	sort_less_than_ten(t_stack **s1, t_stack **s2)$/;"	f
 sort_list	sort_list.c	/^t_stack	*sort_list(t_stack *s, int (*cmp)(int, int))$/;"	f
-sort_three	push_swap.c	/^void	sort_three(t_stack **s)$/;"	f
+sort_stack_b	save_ok.c	/^void	sort_stack_b(t_stack **s1, t_stack **s2)$/;"	f
+sort_stack_b	small_sorting.c	/^void	sort_stack_b(t_stack **s1, t_stack **s2)$/;"	f
+sort_three	short_sorting.c	/^void	sort_three(t_stack **s)$/;"	f
+sort_two	short_sorting.c	/^void	sort_two(t_stack **s1, t_stack **s2, int i)$/;"	f
+ss	push_swap_tester/files/srcs/share/operation1.c	/^void	ss(t_deque *stack[2])$/;"	f
+stack_a	push_swap.h	/^# define stack_a	/;"	d
+stack_b	push_swap.h	/^# define stack_b /;"	d
 stack_size	nodes_ops.c	/^int stack_size(t_stack *ptr)$/;"	f
+str	push_swap_tester/files/libft/get_next_line.h	/^	t_str			*str;$/;"	m	struct:s_lst
 string_case	prepare_string.c	/^int string_case(char **av)$/;"	f
+sub	push_swap_tester/files/libft/get_next_line_sub.c	/^static int	sub(t_lst *target, t_lst **head, int *res)$/;"	f	file:
+sub	push_swap_tester/files/srcs/bonus/bonus.c	/^static void	sub(t_list *cur_instruction, t_deque *stack[2],$/;"	f	file:
+sub	push_swap_tester/files/srcs/checker/check.c	/^static void	sub(t_list *cur_instruction, t_deque *stack[2])$/;"	f	file:
+sub	push_swap_tester/files/srcs/radix/radix.c	/^static void	sub(t_list *cur_instruction, t_deque *stack[2],$/;"	f	file:
+sub	push_swap_tester/files/srcs/share/operation4.c	/^static void	sub(int ct[3], t_double_list *cur[2],$/;"	f	file:
+sub	push_swap_tester/files/srcs/share/utils.c	/^static void	sub(long long ct[3], char **str)$/;"	f	file:
+sub2	push_swap_tester/files/srcs/radix/radix.c	/^static void	sub2(int ct[3], t_double_list *cur[2],$/;"	f	file:
 swap_op	swap_ops.c	/^void	swap_op(t_stack **s)$/;"	f
+t_deque	push_swap_tester/files/libft/libft.h	/^}				t_deque;$/;"	t	typeref:struct:s_deque
+t_double_list	push_swap_tester/files/libft/libft.h	/^}				t_double_list;$/;"	t	typeref:struct:s_double_list
 t_list	libft/includes/libft.h	/^}					t_list;$/;"	t	typeref:struct:s_list
+t_list	push_swap_tester/files/libft/libft.h	/^}				t_list;$/;"	t	typeref:struct:s_list
+t_lst	push_swap_tester/files/libft/get_next_line.h	/^}				t_lst;$/;"	t	typeref:struct:s_lst
+t_memory	push_swap_tester/files/libft/libft.h	/^}				t_memory;$/;"	t	typeref:enum:e_memory
 t_stack	push_swap.h	/^}                       t_stack;$/;"	t	typeref:struct:s_stack
+t_str	push_swap_tester/files/libft/get_next_line.h	/^}				t_str;$/;"	t	typeref:struct:s_str
+tail	push_swap_tester/files/libft/libft.h	/^	struct s_double_list	*tail;$/;"	m	struct:s_deque	typeref:struct:s_deque::s_double_list
 there_is_n	libft/get_next_line/get_next_line_utils.c	/^int	there_is_n(char *line)$/;"	f
+top	push_swap_tester/files/algo.cpp	/^#define top /;"	d	file:
 transform	libft/libft/ft_atoi_base.c	/^int	transform(char c)$/;"	f

@@ -48,12 +48,9 @@ t_stack *init_stack_a(char **str)
     {
         a = new_node(str[i]);
         if (!a)
-        {
-            while (head != NULL)
-			{
-				free_list(&head);
-				return (NULL);
-			}
+		{
+			free_list(&head);
+			return (NULL);
         }
         node_backadd(&head, &a);
         i++;
@@ -61,27 +58,6 @@ t_stack *init_stack_a(char **str)
     sort_index(&head);
 	set_index_position(&head);
     return (head);
-}
-
-t_stack *prepare_stack_a(char **av)
-{
-    char    **str;
-    t_stack *a;
-
-    str = NULL;
-    if (string_case(av) == one_str_mult_num)
-    {
-        str = ft_split(*av, 32);
-        if (!str)
-            return (NULL);
-        a = init_stack_a(str);
-		free_string(str);
-    }
-    if (string_case(av) == multiple_string)
-        a = init_stack_a(av);
-	if (!a)
-		return (NULL);
-    return (a);
 }
 
 t_stack *create_stack_a(char **av, t_stack **a, t_stack **b)
@@ -97,13 +73,13 @@ t_stack *create_stack_a(char **av, t_stack **a, t_stack **b)
         str = ft_split(*av, 32);
         if (!str)
             return (NULL);
-        *a = prepare_stack_a(str);
+        *a = init_stack_a(str);
         free_string(str);
     }
     else if (str_case == multiple_string)
-        *a = prepare_stack_a(av);
+        *a = init_stack_a(av);
     else if (str_case == one_num)
-        exit(0);
+		error_msg_stop();
     if (!a)
         return (NULL);
 	check_if_sorted_and_exit(*a, *b, stack_size(*a));

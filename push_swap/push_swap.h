@@ -8,8 +8,10 @@
 # define one_num 2
 # define multiple_string 3
 # define stack_a	4
-# define stack_b    5	
-
+# define stack_b    5
+# define do_rra		6
+# define do_ra		7
+# define do_rrb		8
 typedef struct  s_stack
 {
     int                 content;

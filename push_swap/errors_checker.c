@@ -3,7 +3,7 @@
 void no_int_errors(char **str)
 {
     char    *s_int_max = "2147483647";
-    char    *s_int_max2 = "+2147483647";
+	char    *s_int_max2 = "+2147483647";
     char    *s_int_min = "-2147483648";
 
     int i;
