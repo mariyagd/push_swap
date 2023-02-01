@@ -46,7 +46,6 @@ t_stack 	*prepare_stack_a(char **av);
 int			stack_size(t_stack *ptr);
 void    	set_actual_index(t_stack **a);
 t_stack 	*find_before_last(t_stack **a);
-void    set_index_position(t_stack **a);
 
 //free string
 void		free_string(char **str);
@@ -54,7 +53,9 @@ void		free_list(t_stack **s);
 
 //sort operations
 void 		sort_int_tab(int **tab, unsigned int size);
-void    	sort_index(t_stack **head);
+void		sort_index(t_stack **head, int **array, int size);
+void		set_index(t_stack **head);
+void		set_position(t_stack **s);
 
 //check if sorted
 void	check_if_sorted_and_exit(t_stack *s1, t_stack *s2, int size);

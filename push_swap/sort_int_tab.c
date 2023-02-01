@@ -1,10 +1,27 @@
 #include "push_swap.h"
 
-void sort_int_tab(int **tab, unsigned int size)
+/* Here are two main functions 
+ * - set_index and set_postion
+ *
+ *   set_index copies the numbers in a array,
+ *   the sort the array and then attribute
+ *   the indexes in the linked list. Finally it frees
+ *   the table.
+ *   
+ *   ths two functions are mainly usefule
+ *   for linked list creation.
+ *
+ *   set_position attribute index positions from 0 
+ *   starting from the head.
+ *
+ *   this function is mainly usefull for sorting
+ *   less than 10 numbers*/
+
+void	sort_int_tab(int **tab, unsigned int size)
 {
 	unsigned int	i;
 	unsigned int	j;
-	int	swap;
+	int				swap;
 
 	i = 0;
 	j = 0;
@@ -27,91 +44,65 @@ void sort_int_tab(int **tab, unsigned int size)
 	}
 }
 
-void    sort_index(t_stack **head)
+void	sort_index(t_stack **head, int **array, int size)
 {
-    int			size;
-    int			*i_array;
-    int			i;
-    t_stack		*ptr;
+	int			i;
+	t_stack		*ptr;
 
-    i = 0;
-    ptr = *head;
-    size = stack_size(*head);
-    i_array = malloc(size * sizeof(int));
-    if (!i_array)
-        return ;
-    while (i < size && ptr != NULL)
-    {
-        i_array[i] = ptr->content;
-        i++;
-        ptr = ptr->next;
-    }
-    sort_int_tab(&i_array, (unsigned int) size);
-    ptr = *head;
-    i = 0;
-    while (i < size)
-    {
-        if (ptr == NULL)
-            ptr = *head;
-        if (i_array[i] == ptr->content)
-        {
-            ptr->index_sorted = i + 1;
-            ptr = *head;
-            i++;
-        }
-        else
-            ptr = ptr->next;
-    }
-	free(i_array);
+	i = 0;
+	*array = (int *)malloc(size * sizeof(int));
+	if (!*array)
+		return ;
+	ptr = *head;
+	while (i < size && ptr != NULL)
+	{
+		(*array)[i] = ptr->content;
+		i++;
+		ptr = ptr->next;
+	}
+	sort_int_tab(array, (unsigned int)size);
 }
 
-void    set_index_position(t_stack **s)
+void	set_index(t_stack **head)
 {
-    t_stack *ptr;
-    int     i;
+	int			*array;
+	int			size;
+	int			i;
+	t_stack		*ptr;
 
-    ptr = *s;
-    i = 1;
-    while (ptr != NULL)
-    {
-        ptr->pos = i;
-        i++;
-        ptr = ptr->next;
-    }
-}
-/*
-#include <stdio.h>
-#include <stdlib.h>
-int	main(void)
-{
-	unsigned int	i = 0;
-	unsigned int	size = 15;
-	int tab[15] = {534, -1243435, 4223, 78, -6, 2357, -564, -6544782, 6654752, 2421, 3, 1, -64578213, 65478213, 32442};
-	sort_int_tab(tab, size);
+	size = stack_size(*head);
+	sort_index(head, &array, size);
+	if (!array)
+		return ;
+	ptr = *head;
+	i = 0;
 	while (i < size)
 	{
-		printf("%d ", tab[i]);
-		i++;
+		if (ptr == NULL)
+			ptr = *head;
+		if (array[i] == ptr->content)
+		{
+			ptr->index_sorted = i + 1;
+			ptr = *head;
+			i++;
+		}
+		else
+			ptr = ptr->next;
 	}
-	return (0);
+	free(array);
 }
-*/
 
+void	set_position(t_stack **s)
+{
+	t_stack	*ptr;
+	int		i;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	ptr = *s;
+	i = 1;
+	while (ptr != NULL)
+	{
+		ptr->pos = i;
+		i++;
+		ptr = ptr->next;
+	}
+}

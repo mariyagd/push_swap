@@ -55,8 +55,8 @@ t_stack *init_stack_a(char **str)
         node_backadd(&head, &a);
         i++;
     }
-    sort_index(&head);
-	set_index_position(&head);
+    set_index(&head);
+	set_position(&head);
     return (head);
 }
 

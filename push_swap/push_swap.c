@@ -14,12 +14,12 @@
  * create_stack_a(char **av, t_stack **a);
  * if there are no arguments -> return nothing
  * if there are arguments -> check for errors
- * if there is only one string with one number and no errors
- *		-> create a new node only and exit the program
+ * if there is only one string with one number
+ *		-> return error
  *	if there is only one string with multiple numbers inside
  *		-> split the string
  *		-> prepare a linked list
- *		-> free
+ *		-> free the string
  *		-> return the linked list
  *	if there are multiple strings
  *		-> prepare a linked list
@@ -51,7 +51,6 @@ int	main(int ac, char **av)
 	if (ac == 1)
 		return (0);
 	av++;
-
 	a = create_stack_a(av, &a, &b);
 	if (!a)
 		return (0);
@@ -60,13 +59,8 @@ int	main(int ac, char **av)
 		short_sorting(&a, &b);
 	if (size >= 6 && size <= 10)
 		sort_less_than_ten(&a, &b);
-	if (size >=11 && size <= 500)
+	if (size >= 11 && size <= 500)
 		small_sorting(&a, &b, size);
 	check_if_sorted_and_exit(a, b, size);
 	return (1);
-
 }
-
-
-
-

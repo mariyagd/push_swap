@@ -69,7 +69,7 @@ void	sort_less_than_ten(t_stack **s1, t_stack **s2)
 		if ((*s1)->index_sorted == min && check_if_sorted(*s1) == false)
 		{
 			ft_pb(s1, s2);
-			set_index_position(s1);
+			set_position(s1);
 		}
 	}
 	if (stack_size(*s1) == 3)
@@ -113,7 +113,7 @@ int	helper(t_stack *s, int ind_search)
 	int	middle;
 
 	middle = stack_size(s) / 4;
-	set_index_position(&s);
+	set_position(&s);
 	while (s && s->index_sorted != ind_search)
 		s = s->next;
 	if (s->pos > middle)

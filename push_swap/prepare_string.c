@@ -11,47 +11,47 @@
 /* ************************************************************************** */
 #include "push_swap.h"
 
-bool one_string_case(char *av)
+bool	one_string_case(char *av)
 {
-    char    **str;
-    int i;
-    int flag;
+	char	**str;
+	int		i;
+	int		flag;
 
-    i = 0;
-    flag = 0;
-    while (av[i] != 0)
-    {
-        if (av[i] == 32)
-            flag++;
-        i++;
-    }
-    if (flag > 0)
-    {
-        str = ft_split(av, 32);
-        no_errors(str);
+	i = 0;
+	flag = 0;
+	while (av[i] != 0)
+	{
+		if (av[i] == 32)
+			flag++;
+		i++;
+	}
+	if (flag > 0)
+	{
+		str = ft_split(av, 32);
+		no_errors(str);
 		i = 0;
 		free_string(str);
-        return (true);
-    }
-    else
-        return (false);
+		return (true);
+	}
+	else
+		return (false);
 }
 
-int string_case(char **av)
+int	string_case(char **av)
 {
-    int count;
+	int	count;
 
-    count = 0;
-    while (av[count] != 0)
-        count++;
-    if (count == 1)
-    {
-        if (one_string_case(*av) == true)
-            return (one_str_mult_num);
-        else
-            return (one_num);
-    }
-    else if (count >= 2)
-        no_errors(av);
-    return (multiple_string);
+	count = 0;
+	while (av[count] != 0)
+		count++;
+	if (count == 1)
+	{
+		if (one_string_case(*av) == true)
+			return (one_str_mult_num);
+		else
+			return (one_num);
+	}
+	else if (count >= 2)
+		no_errors(av);
+	return (multiple_string);
 }
