@@ -62,10 +62,13 @@ Les arguments peuvent être donné par deux manière:
 
 </summary> 
 
+```diff
+- Si aucun argument n’est spécifié, le programme ne doit rien afficher.
+- Si il y un seul nombre qui entre dans les limites de int, le programme ne fait rien.
+ ```
 - Si l'argument n'est pas un `int`, c'est-à-dire si l'argument est plus grand que INT_MAX ou plus petit que INT_MIN;
 - Si l'argument n'est pas un `int`, c'est-à-dire que c'est un `char` (p.ex.  `zero` n'est pas un `int` mais une chaîne de caractères);
 - S'il y a des doublons dans les arguments.
-- S'il y a un seul argument.
 
 Par exemple les cas suivants doivent afficher le message d'erreur:
 
@@ -74,8 +77,13 @@ Par exemple les cas suivants doivent afficher le message d'erreur:
 ./push_swap 1 2 3 214748364754123
 ./push_swap 1 2 3 four
 ./push_swap 1 2 3 3
-./push_swap 1
 ```
+
+<details><summary> 
+
+##### Message d'erreur
+
+</summary> 
 
 ##### Le message d'erreur est affiché à l'aide de la fonction 'write' ou `ft_putchar_fd` de la libtf afin de pouvoir indiquer un message d'erreur sur la sortie d'erreur stderr qui est le numéro **2**. Ensuite on ferme le programme avec `exit(1)`, où `1` indique que le programme n'a pas pu s'exécuter correctement.
 
@@ -98,8 +106,14 @@ void error_msg_stop(void)
      exit(1);
 }
 ```
+</details>
 
-##### Problème: `atoi()` ne permet pas de gérer le dépassement de `INT_MIN` et `INT_MAX` de manière fiable. Une valeur qui dépassera les limites de `int` sera transformé en une valeur qui entre dans les limites. 
+<details><summary> 
+
+##### Dépassement des valeurs limites des `int`.
+</summary> 
+
+##### Problème: `ft_atoi()` ne permet pas de gérer le dépassement de `INT_MIN` et `INT_MAX` de manière fiable. Une valeur qui dépassera les limites de `int` sera transformé en une valeur qui entre dans les limites. 
 
 P.ex.
 ```
@@ -112,9 +126,29 @@ Output:
 -1
 ```
 
-Pour gérer ce problème, j'ai décidé vérifier s'il y a des erreurs 
+Pour gérer ce problème, j'ai décidé vérifier s'il y a des erreurs avant d'utiliser `ft_atoi()`. Les arguments étant des strings, j'ai utilisé `ft_strlen()` et `ft_strncmp()`.
 
-#### Si aucun argument n’est spécifié, le programme ne doit rien afficher.
+Voici un exemple:
+
+```c
+void    negative_int_check(char *str)
+{
+    char    *s_int_min;
+    int     len;
+
+    if (!str)
+        return ;
+    s_int_min = "-2147483648";
+    len = ft_strlen(str);
+    if (len > 11)
+        error_msg_stop();
+    if (len == 11 && ft_strncmp(s_int_min, str, 11) < 0)
+        error_msg_stop();
+}
+```
+</details>
+
+
 
 </details>
 
@@ -141,28 +175,18 @@ typedef struct s_stack
 
 <details><summary> 
 
-#### 4. Triage selon les cas
+#### 4. Checker
 
+for 42 checker use: 
 </summary> 
 
-<details><summary> 
+```c
+ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker_Mac $ARG
 
-##### Cas 3 arguments
-
-</summary> 
-
-dsgdgsdg
-dadqw
+./push_swap 4 5 7 | ./checker_Mac $ARG
+```
 
 </details>
 
 <details><summary> 
-
-##### Cas 5 argument
-
-</summary>
-
-dasfasf
-
-</details>
 
