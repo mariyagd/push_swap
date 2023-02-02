@@ -30,36 +30,8 @@ Le jeu est constitué de 2 piles nommées a et b.
 
 <details><summary> 
 
-#### Mots-clé
 
-</summary> 
-
-- Algorithmes de tri
-- Liste chaîné double sens 
-- Fonction `exit` (void manpages)
-- médiane
-- min_index
-
-</details>
-
----
-
-<details><summary> 
-
-#### Fonctions 
-
-</summary> 
-
-- `parser()` - prépare la pile a
-- `sorting()` 
-- `free_stack()`
-- `error()`
-
-</details>
-
----
-
-## PLAN DE REFLEXION:
+## IMPORTANT
 
 <details><summary> 
 
@@ -70,15 +42,14 @@ Le jeu est constitué de 2 piles nommées a et b.
 Les arguments peuvent être donné par deux manière:
 
 1) Plusieurs chaînes de caractères:
-```ruby
+```c
 ./push_swap 1 2 3
 ```
 2) Une chaîne de caractère:
 
-```ruby
+```c
 ./push_swap "1 2 3"
 ```
-C'est la fonction `parser` qui va déterminer dans quel cas on se trouve. Pour cette raison il faut commencer la fonction en comptant le nombre d'arguments `argc`.
 
 </details>
 
@@ -87,26 +58,62 @@ C'est la fonction `parser` qui va déterminer dans quel cas on se trouve. Pour c
 
 <details><summary> 
 
-#### 2. Cas d'erreurs:
+#### 2. Cas d'erreurs
 
 </summary> 
 
+```diff
+- Si aucun argument n’est spécifié, le programme ne doit rien afficher.
+- Si il y un seul nombre qui entre dans les limites de int, le programme ne fait rien.
+ ```
 - Si l'argument n'est pas un `int`, c'est-à-dire si l'argument est plus grand que INT_MAX ou plus petit que INT_MIN;
 - Si l'argument n'est pas un `int`, c'est-à-dire que c'est un `char` (p.ex.  `zero` n'est pas un `int` mais une chaîne de caractères);
 - S'il y a des doublons dans les arguments.
 
 Par exemple les cas suivants doivent afficher le message d'erreur:
 
-```
+```c
 ./push_swap 1 2 3 -2147483648562244
 ./push_swap 1 2 3 214748364754123
-./push_swap 1 2 3 zero
-./push_swap 1 1 2 3
+./push_swap 1 2 3 four
+./push_swap 1 2 3 3
 ```
 
-##### Le message d'erreur est affiché à l'aide de la fonction `ft_printf()` qui fait partie de la librarie `libft.h`. Une condition supplémentaire a été ajoutée afin de pouvoir afficher `\n`.
+<details><summary> 
 
-##### Problème: `atoi()` ne permet pas de gérer le dépassement de `INT_MIN` et `INT_MAX` de manière fiable. Une valeur qui dépassera les limites de `int` sera transformé en une valeur qui entre dans les limites. 
+##### Message d'erreur
+
+</summary> 
+
+##### Le message d'erreur est affiché à l'aide de la fonction 'write' ou `ft_putchar_fd` de la libtf afin de pouvoir indiquer un message d'erreur sur la sortie d'erreur stderr qui est le numéro **2**. Ensuite on ferme le programme avec `exit(0)`, où `0` indique que le programme s'ext exécuté correctement.
+
+Voici deux exemples de fonction qui affiche le message d'erreur:
+ 
+```c
+void error_msg_stop(void)
+{
+     write(2, "Error\n", 6);
+     exit(1);
+}
+```
+
+or
+
+```c
+void error_msg_stop(void)
+{
+     ft_putchar_fd("Error\n", 2);
+     exit(1);
+}
+```
+</details>
+
+<details><summary> 
+
+##### Dépassement des valeurs limites des `int`.
+</summary> 
+
+##### Problème: `ft_atoi()` ne permet pas de gérer le dépassement de `INT_MIN` et `INT_MAX` de manière fiable. Une valeur qui dépassera les limites de `int` sera transformé en une valeur qui entre dans les limites. 
 
 P.ex.
 ```
@@ -119,8 +126,29 @@ Output:
 -1
 ```
 
+Pour gérer ce problème, j'ai décidé vérifier s'il y a des erreurs avant d'utiliser `ft_atoi()`. Les arguments étant des strings, j'ai utilisé `ft_strlen()` et `ft_strncmp()`.
 
-#### Si aucun argument n’est spécifié, le programme ne doit rien afficher.
+Voici un exemple:
+
+```c
+void    negative_int_check(char *str)
+{
+    char    *s_int_min;
+    int     len;
+
+    if (!str)
+        return ;
+    s_int_min = "-2147483648";
+    len = ft_strlen(str);
+    if (len > 11)
+        error_msg_stop();
+    if (len == 11 && ft_strncmp(s_int_min, str, 11) < 0)
+        error_msg_stop();
+}
+```
+</details>
+
+
 
 </details>
 
@@ -131,25 +159,14 @@ Output:
 
 </summary> 
 
-```ruby
-typedef struct s_node
+```c
+typedef struct s_stack
 {
+     int              content;
      int              index;
-     int              flag;
-     struct s_list    *next;
-     struct s_list    *previous;
-}                     t_node;
-
-typedef struct s_all
-{
-    t_node            *stack_a;
-    t_node            *stack_b;
-    int               min_a;
-    int               median;
-    int               length_a;
-    int               length_b;
-}                     t_all;
-
+     int              position;
+     struct s_stack    *next;
+}                     t_stack;
 ```
 
 </details>
@@ -158,28 +175,49 @@ typedef struct s_all
 
 <details><summary> 
 
-#### 4. Triage selon les cas
+#### 4. Checker
 
 </summary> 
 
-<details><summary> 
+- Checker de l'école 42 (les droit d'exécution doivent être activé `chmod +x checker_Mac`
 
-##### Cas 3 arguments
 
-</summary> 
+```c
+ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker_Mac $ARG
 
-dsgdgsdg
-dadqw
+./push_swap 4 5 7 | ./checker_Mac $ARG
+```
+- Checker Random - génère des nombres aléatoires et utilise le checker de l'école 42 pour vérifier si les résultat est juste.
+
+Placer les fichier `random.sh`, `random.ruby` et `checker` dans le dossier push_swap, et exécuter le script en indiquant le nombre d'arguments que vous voulez. P.ex. pour 150 nombres:
+
+```
+bash random.sh 500
+```
 
 </details>
 
+---
+
 <details><summary> 
 
-##### Cas 5 argument
+#### 5. Leaks checking 
 
 </summary>
 
-dasfasf
+Deux manières pour vérifier pour des leaks:
+
+1) Dans le fichier `Makefile`:
+
+```c
+CFLAGS = -Wall -Wextra -Werror -g -fsanitize=address -fno-omit-frame-pointer
+```
+2) Lors de l'exécution du programme:
+
+```c
+leaks -atExit -- ./push_swap 5 32 147 8 
+```
+
+ 
 
 </details>
-
