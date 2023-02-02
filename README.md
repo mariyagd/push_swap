@@ -181,7 +181,7 @@ typedef struct s_stack
 
 </summary> 
 
-- Checker de l'école 42 (les droit d'exécution doivent être activé `chmod +x checker_Mac`
+- Checker de l'école 42 (les droits d'exécution doivent être activés `chmod +x checker_Mac`
 
 
 ```c
@@ -189,9 +189,9 @@ ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker_Mac $ARG
 
 ./push_swap 4 5 7 | ./checker_Mac $ARG
 ```
-- Checker Random - génère des nombres aléatoires et utilise le checker de l'école 42 pour vérifier si les résultat est juste.
+- Checker Random - génère des nombres aléatoires et utilise le checker de l'école 42 pour vérifier si le résultat est juste.
 
-Placer les fichier `random.sh`, `random.ruby` et `checker` dans le dossier push_swap, et exécuter le script en indiquant le nombre d'arguments que vous voulez. P.ex. pour 150 nombres:
+Placer les fichiers `random.sh`, `random.ruby` et `checker` dans le dossier push_swap, et exécuter le script en indiquant le nombre d'arguments que vous voulez. P.ex. pour 150 nombres:
 
 ```
 bash random.sh 500
