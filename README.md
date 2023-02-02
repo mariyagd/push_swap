@@ -66,6 +66,8 @@ Les arguments peuvent être donné par deux manière:
 - Si aucun argument n’est spécifié, le programme ne doit rien afficher.
 - Si il y un seul nombre qui entre dans les limites de int, le programme ne fait rien.
  ```
+ Il y a erreur si:
+ 
 - Si l'argument n'est pas un `int`, c'est-à-dire si l'argument est plus grand que INT_MAX ou plus petit que INT_MIN;
 - Si l'argument n'est pas un `int`, c'est-à-dire que c'est un `char` (p.ex.  `zero` n'est pas un `int` mais une chaîne de caractères);
 - S'il y a des doublons dans les arguments.
