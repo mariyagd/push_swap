@@ -30,34 +30,6 @@ Le jeu est constitué de 2 piles nommées a et b.
 
 <details><summary> 
 
-#### Mots-clé
-
-</summary> 
-
-- Algorithmes de tri
-- Liste chaîné double sens 
-- Fonction `exit` (void manpages)
-- médiane
-- min_index
-
-</details>
-
----
-
-<details><summary> 
-
-#### Fonctions 
-
-</summary> 
-
-- `parser()` - prépare la pile a
-- `sorting()` 
-- `free_stack()`
-- `error()`
-
-</details>
-
----
 
 ## PLAN DE REFLEXION:
 
@@ -70,15 +42,14 @@ Le jeu est constitué de 2 piles nommées a et b.
 Les arguments peuvent être donné par deux manière:
 
 1) Plusieurs chaînes de caractères:
-```ruby
+```c
 ./push_swap 1 2 3
 ```
 2) Une chaîne de caractère:
 
-```ruby
+```c
 ./push_swap "1 2 3"
 ```
-C'est la fonction `parser` qui va déterminer dans quel cas on se trouve. Pour cette raison il faut commencer la fonction en comptant le nombre d'arguments `argc`.
 
 </details>
 
@@ -94,17 +65,36 @@ C'est la fonction `parser` qui va déterminer dans quel cas on se trouve. Pour c
 - Si l'argument n'est pas un `int`, c'est-à-dire si l'argument est plus grand que INT_MAX ou plus petit que INT_MIN;
 - Si l'argument n'est pas un `int`, c'est-à-dire que c'est un `char` (p.ex.  `zero` n'est pas un `int` mais une chaîne de caractères);
 - S'il y a des doublons dans les arguments.
+- S'il y a un seul argument.
 
 Par exemple les cas suivants doivent afficher le message d'erreur:
 
-```
+```c
 ./push_swap 1 2 3 -2147483648562244
 ./push_swap 1 2 3 214748364754123
-./push_swap 1 2 3 zero
-./push_swap 1 1 2 3
+./push_swap 1 2 3 four
+./push_swap 1 2 3 3
+./push_swap 1
 ```
 
-##### Le message d'erreur est affiché à l'aide de la fonction `ft_printf()` qui fait partie de la librarie `libft.h`. Une condition supplémentaire a été ajoutée afin de pouvoir afficher `\n`.
+##### Le message d'erreur est affiché à l'aide de la fonction 'write' ou `ft_putchar_fd` de la libtf afin de pouvoir indiquer un message d'erreur dans stderr.
+
+```c
+void error_msg_stop(void)
+{
+     write(2, "Error\n", 6);
+     exit(1);
+}
+```
+
+or
+
+```c
+void error_msg_stop(void)
+{
+     ft_putchar_fd("Error\n", 2);
+     exit(1);
+}
 
 ##### Problème: `atoi()` ne permet pas de gérer le dépassement de `INT_MIN` et `INT_MAX` de manière fiable. Une valeur qui dépassera les limites de `int` sera transformé en une valeur qui entre dans les limites. 
 
@@ -131,25 +121,14 @@ Output:
 
 </summary> 
 
-```ruby
-typedef struct s_node
+```c
+typedef struct s_stack
 {
+     int              content;
      int              index;
-     int              flag;
-     struct s_list    *next;
-     struct s_list    *previous;
-}                     t_node;
-
-typedef struct s_all
-{
-    t_node            *stack_a;
-    t_node            *stack_b;
-    int               min_a;
-    int               median;
-    int               length_a;
-    int               length_b;
-}                     t_all;
-
+     int              position;
+     struct s_stack    *next;
+}                     t_stack;
 ```
 
 </details>
