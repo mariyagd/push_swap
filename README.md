@@ -85,7 +85,7 @@ Par exemple les cas suivants doivent afficher le message d'erreur:
 
 </summary> 
 
-##### Le message d'erreur est affiché à l'aide de la fonction 'write' ou `ft_putchar_fd` de la libtf afin de pouvoir indiquer un message d'erreur sur la sortie d'erreur stderr qui est le numéro **2**. Ensuite on ferme le programme avec `exit(0)`, où `0` indique que le programme s'ext exécuté correctement.
+##### Le message d'erreur est affiché à l'aide de la fonction `write` ou `ft_putchar_fd` de la libft afin de pouvoir indiquer un message d'erreur sur la sortie d'erreur stderr qui est le numéro **2**. Ensuite on ferme le programme avec `exit(0)`, où `0` indique que le programme s'ext exécuté correctement.
 
 Voici deux exemples de fonction qui affiche le message d'erreur:
  
@@ -93,17 +93,17 @@ Voici deux exemples de fonction qui affiche le message d'erreur:
 void error_msg_stop(void)
 {
      write(2, "Error\n", 6);
-     exit(1);
+     exit(0);
 }
 ```
 
-or
+ou
 
 ```c
 void error_msg_stop(void)
 {
      ft_putchar_fd("Error\n", 2);
-     exit(1);
+     exit(0);
 }
 ```
 </details>
