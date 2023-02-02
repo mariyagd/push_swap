@@ -31,7 +31,7 @@ Le jeu est constitué de 2 piles nommées a et b.
 <details><summary> 
 
 
-## PLAN DE REFLEXION:
+## IMPORTANT
 
 <details><summary> 
 
@@ -58,7 +58,7 @@ Les arguments peuvent être donné par deux manière:
 
 <details><summary> 
 
-#### 2. Cas d'erreurs:
+#### 2. Cas d'erreurs
 
 </summary> 
 
@@ -85,7 +85,7 @@ Par exemple les cas suivants doivent afficher le message d'erreur:
 
 </summary> 
 
-##### Le message d'erreur est affiché à l'aide de la fonction 'write' ou `ft_putchar_fd` de la libtf afin de pouvoir indiquer un message d'erreur sur la sortie d'erreur stderr qui est le numéro **2**. Ensuite on ferme le programme avec `exit(1)`, où `1` indique que le programme n'a pas pu s'exécuter correctement.
+##### Le message d'erreur est affiché à l'aide de la fonction 'write' ou `ft_putchar_fd` de la libtf afin de pouvoir indiquer un message d'erreur sur la sortie d'erreur stderr qui est le numéro **2**. Ensuite on ferme le programme avec `exit(0)`, où `0` indique que le programme s'ext exécuté correctement.
 
 Voici deux exemples de fonction qui affiche le message d'erreur:
  
@@ -177,16 +177,47 @@ typedef struct s_stack
 
 #### 4. Checker
 
-for 42 checker use: 
 </summary> 
+
+- Checker de l'école 42 (les droit d'exécution doivent être activé `chmod +x checker_Mac`
+
 
 ```c
 ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker_Mac $ARG
 
 ./push_swap 4 5 7 | ./checker_Mac $ARG
 ```
+- Checker Random - génère des nombres aléatoires et utilise le checker de l'école 42 pour vérifier si les résultat est juste.
+
+Placer les fichier `random.sh`, `random.ruby` et `checker` dans le dossier push_swap, et exécuter le script en indiquant le nombre d'arguments que vous voulez. P.ex. pour 150 nombres:
+
+```
+bash random.sh 500
+```
 
 </details>
 
+---
+
 <details><summary> 
 
+#### 5. Leaks checking 
+
+</summary>
+
+Deux manières pour vérifier pour des leaks:
+
+1) Dans le fichier `Makefile`:
+
+```c
+CFLAGS = -Wall -Wextra -Werror -g -fsanitize=address -fno-omit-frame-pointer
+```
+2) Lors de l'exécution du programme:
+
+```c
+leaks -atExit -- ./push_swap 5 32 147 8 
+```
+
+ 
+
+</details>
