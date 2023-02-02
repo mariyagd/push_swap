@@ -77,8 +77,10 @@ Par exemple les cas suivants doivent afficher le message d'erreur:
 ./push_swap 1
 ```
 
-##### Le message d'erreur est affiché à l'aide de la fonction 'write' ou `ft_putchar_fd` de la libtf afin de pouvoir indiquer un message d'erreur dans stderr.
+##### Le message d'erreur est affiché à l'aide de la fonction 'write' ou `ft_putchar_fd` de la libtf afin de pouvoir indiquer un message d'erreur sur la sortie d'erreur stderr qui est le numéro **2**. Ensuite on ferme le programme avec `exit(1)`, où `1` indique que le programme n'a pas pu s'exécuter correctement.
 
+Voici deux exemples de fonction qui affiche le message d'erreur:
+ 
 ```c
 void error_msg_stop(void)
 {
@@ -95,6 +97,7 @@ void error_msg_stop(void)
      ft_putchar_fd("Error\n", 2);
      exit(1);
 }
+```
 
 ##### Problème: `atoi()` ne permet pas de gérer le dépassement de `INT_MIN` et `INT_MAX` de manière fiable. Une valeur qui dépassera les limites de `int` sera transformé en une valeur qui entre dans les limites. 
 
@@ -109,6 +112,7 @@ Output:
 -1
 ```
 
+Pour gérer ce problème, j'ai décidé vérifier s'il y a des erreurs 
 
 #### Si aucun argument n’est spécifié, le programme ne doit rien afficher.
 
