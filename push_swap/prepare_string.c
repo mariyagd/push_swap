@@ -6,7 +6,7 @@
 /*   By: mdanchev <mdanchev@42lausanne.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 16:08:51 by mdanchev          #+#    #+#             */
-/*   Updated: 2023/02/01 17:24:12 by mdanchev         ###   lausanne.ch       */
+/*   Updated: 2023/02/02 15:01:19 by mdanchev         ###   lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -47,11 +47,11 @@ int	string_case(char **av)
 	if (count == 1)
 	{
 		if (one_string_case(*av) == true)
-			return (one_str_mult_num);
+			return (ONE_STR_MULT_NUM);
 		else
-			return (one_num);
+			return (ONE_NUM);
 	}
 	else if (count >= 2)
 		no_errors(av);
-	return (multiple_string);
+	return (MULTIPLE_STRING);
 }

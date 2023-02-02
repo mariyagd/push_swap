@@ -1,42 +1,37 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   errors_checker.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdanchev <mdanchev@42lausanne.ch>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/02 11:17:51 by mdanchev          #+#    #+#             */
+/*   Updated: 2023/02/02 11:36:04 by mdanchev         ###   lausanne.ch       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "push_swap.h"
 
-void	no_int_errors(char **str)
-{
-	char	*s_int_max = "2147483647";
-	char	*s_int_max2 = "+2147483647";
-	char	*s_int_min = "-2147483648";
-	int		i;
-	int		len;
-
-	i = 0;
-	len = 0;
-	while (str[i] != 0)
-	{
-		len = ft_strlen(str[i]);
-		if (str[i][0] == '-')
-		{
-			if (len > 11)
-				error_msg_stop();
-			if (len == 11 && ft_strncmp(s_int_min, str[i], 11) < 0)
-				error_msg_stop();
-		}
-		else if (str[i][0] == '+')
-		{
-			if (len > 11)
-				error_msg_stop();
-			if (len == 11 && ft_strncmp(s_int_max2, str[i], 11) < 0)
-				error_msg_stop();
-		}
-		else
-		{
-			if (len > 10)
-				error_msg_stop();
-			if (len == 10 && ft_strncmp(s_int_max, str[i], 10) < 0)
-				error_msg_stop();
-		}
-		i++;
-	}
-}
+/* These functions test if the arguments are acceptable
+ * while the argument is still a string. If there are no errors,
+ * the string is tranformed to a number with ft_atoi().
+ *
+ * The no_errors() function works in three steps.
+ *
+ * Steps:
+ *		1. no_other_char() - check if all the caracters of the string are numbers
+ *			from 0 to 9. The string can start with '+' or '-.'.
+ *			These signs can occur only one time and at the beginning
+ *			of the string (because of ft_atoi();
+ *		2. no_int_errors() - if all the arguments are digits or starts with
+ *			'-' or '+', I call the no_int_errors() function which is in file
+ *			int_errors_checker.c. This function verifies if the string
+ *			can be transformed in a int from -2,147,483,648 to 2,147,483,647
+ *		3. no_doubles() - if all the arguments can be transformed in integers,
+ *			I check if there are double. As the arguents are still strings,
+ *			I use ft_strncmp to do so.
+ *
+ *	At every step, if an error occurs, I call the error_msg_stop() function
+ *	which prints Error to the stderr and exit the program.*/
 
 void	no_doubles(char **str)
 {

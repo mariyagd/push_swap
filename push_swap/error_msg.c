@@ -6,13 +6,13 @@
 /*   By: mdanchev <mdanchev@42lausanne.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 16:09:44 by mdanchev          #+#    #+#             */
-/*   Updated: 2023/02/01 16:02:47 by mdanchev         ###   lausanne.ch       */
+/*   Updated: 2023/02/02 16:06:34 by mdanchev         ###   lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
 
-void    error_msg_stop(void)
+void	error_msg_stop(void)
 {
 	write(2, "Error\n", 6);
-    exit(1);
+	exit(0);
 }

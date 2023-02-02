@@ -1,17 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_int_tab.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdanchev <mdanchev@42lausanne.ch>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/02 15:09:08 by mdanchev          #+#    #+#             */
+/*   Updated: 2023/02/02 15:09:11 by mdanchev         ###   lausanne.ch       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "push_swap.h"
 
-/* Here are two main functions 
+/* Here are two main functions
  * - set_index and set_postion
  *
  *   set_index copies the numbers in a array,
  *   the sort the array and then attribute
  *   the indexes in the linked list. Finally it frees
  *   the table.
- *   
+ *
  *   ths two functions are mainly usefule
  *   for linked list creation.
  *
- *   set_position attribute index positions from 0 
+ *   set_position attribute index positions from 0
  *   starting from the head.
  *
  *   this function is mainly usefull for sorting

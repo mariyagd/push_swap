@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_ops.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdanchev <mdanchev@42lausanne.ch>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/02 12:49:32 by mdanchev          #+#    #+#             */
+/*   Updated: 2023/02/02 12:50:19 by mdanchev         ###   lausanne.ch       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "push_swap.h"
 
 /* s1 is the stack that will donor a node
@@ -10,7 +21,6 @@ void	push_op(t_stack **s1, t_stack **s2)
 		return ;
 	frontadd_push_op(s1, s2);
 }
-
 
 void	ft_pb(t_stack **a, t_stack **b)
 {
@@ -26,7 +36,6 @@ void	ft_pa(t_stack **a, t_stack **b)
 
 void	frontadd_push_op(t_stack **s1, t_stack **s2)
 {
-
 	t_stack	*tmp;
 
 	tmp = (*s1)->next;

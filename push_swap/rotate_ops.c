@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rotate_ops.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdanchev <mdanchev@42lausanne.ch>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/02 12:52:23 by mdanchev          #+#    #+#             */
+/*   Updated: 2023/02/02 12:52:38 by mdanchev         ###   lausanne.ch       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "push_swap.h"
 
 void	rotate_op(t_stack **s)
@@ -6,7 +17,7 @@ void	rotate_op(t_stack **s)
 	t_stack	*start;
 
 	if (!*s || (*s)->next == NULL)
-		return;
+		return ;
 	start = *s;
 	*s = (*s)->next;
 	end = *s;
