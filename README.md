@@ -66,6 +66,8 @@ Les arguments peuvent être donné par deux manière:
 - Si aucun argument n’est spécifié, le programme ne doit rien afficher.
 - Si il y un seul nombre qui entre dans les limites de int, le programme ne fait rien.
  ```
+ Il y a erreur si:
+ 
 - Si l'argument n'est pas un `int`, c'est-à-dire si l'argument est plus grand que INT_MAX ou plus petit que INT_MIN;
 - Si l'argument n'est pas un `int`, c'est-à-dire que c'est un `char` (p.ex.  `zero` n'est pas un `int` mais une chaîne de caractères);
 - S'il y a des doublons dans les arguments.
@@ -73,8 +75,9 @@ Les arguments peuvent être donné par deux manière:
 Par exemple les cas suivants doivent afficher le message d'erreur:
 
 ```c
-./push_swap 1 2 3 -2147483648562244
-./push_swap 1 2 3 214748364754123
+./push_swap 1 2 3 999999999999999999999999999999999999999999999
+./push_swap 1 2 3 -999999999999999999999999999999999999999999999
+./push_swap 1 2 3 +999999999999999999999999999999999999999999999
 ./push_swap 1 2 3 four
 ./push_swap 1 2 3 3
 ```
@@ -85,7 +88,7 @@ Par exemple les cas suivants doivent afficher le message d'erreur:
 
 </summary> 
 
-##### Le message d'erreur est affiché à l'aide de la fonction 'write' ou `ft_putchar_fd` de la libtf afin de pouvoir indiquer un message d'erreur sur la sortie d'erreur stderr qui est le numéro **2**. Ensuite on ferme le programme avec `exit(0)`, où `0` indique que le programme s'ext exécuté correctement.
+##### Le message d'erreur est affiché à l'aide de la fonction `write` ou `ft_putchar_fd` de la libft afin de pouvoir indiquer un message d'erreur sur la sortie d'erreur stderr qui est le numéro **2**. Ensuite on ferme le programme avec `exit(0)`, où `0` indique que le programme s'ext exécuté correctement.
 
 Voici deux exemples de fonction qui affiche le message d'erreur:
  
@@ -93,17 +96,17 @@ Voici deux exemples de fonction qui affiche le message d'erreur:
 void error_msg_stop(void)
 {
      write(2, "Error\n", 6);
-     exit(1);
+     exit(0);
 }
 ```
 
-or
+ou
 
 ```c
 void error_msg_stop(void)
 {
      ft_putchar_fd("Error\n", 2);
-     exit(1);
+     exit(0);
 }
 ```
 </details>
@@ -179,7 +182,7 @@ typedef struct s_stack
 
 </summary> 
 
-- Checker de l'école 42 (les droit d'exécution doivent être activé `chmod +x checker_Mac`
+- Checker de l'école 42 (les droits d'exécution doivent être activés `chmod +x checker_Mac`
 
 
 ```c
@@ -187,9 +190,9 @@ ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker_Mac $ARG
 
 ./push_swap 4 5 7 | ./checker_Mac $ARG
 ```
-- Checker Random - génère des nombres aléatoires et utilise le checker de l'école 42 pour vérifier si les résultat est juste.
+- Checker Random - génère des nombres aléatoires et utilise le checker de l'école 42 pour vérifier si le résultat est juste.
 
-Placer les fichier `random.sh`, `random.ruby` et `checker` dans le dossier push_swap, et exécuter le script en indiquant le nombre d'arguments que vous voulez. P.ex. pour 150 nombres:
+Placer les fichiers `random.sh`, `random.ruby` et `checker` dans le dossier push_swap, et exécuter le script en indiquant le nombre d'arguments que vous voulez. P.ex. pour 150 nombres:
 
 ```
 bash random.sh 500
