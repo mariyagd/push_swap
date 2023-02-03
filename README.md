@@ -75,8 +75,9 @@ Les arguments peuvent être donné par deux manière:
 Par exemple les cas suivants doivent afficher le message d'erreur:
 
 ```c
-./push_swap 1 2 3 -2147483648562244
-./push_swap 1 2 3 214748364754123
+./push_swap 1 2 3 999999999999999999999999999999999999999999999
+./push_swap 1 2 3 -999999999999999999999999999999999999999999999
+./push_swap 1 2 3 +999999999999999999999999999999999999999999999
 ./push_swap 1 2 3 four
 ./push_swap 1 2 3 3
 ```
