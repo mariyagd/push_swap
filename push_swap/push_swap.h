@@ -6,7 +6,7 @@
 /*   By: mdanchev <mdanchev@42lausanne.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 14:52:03 by mdanchev          #+#    #+#             */
-/*   Updated: 2023/02/02 15:06:32 by mdanchev         ###   lausanne.ch       */
+/*   Updated: 2023/02/03 13:18:17 by mdanchev         ###   lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef PUSH_SWAP_H
@@ -96,13 +96,12 @@ int			find_median(t_stack *s);
 //short sorting
 void		sort_two(t_stack **s);
 void		sort_three(t_stack **s);
-void		sort_four(t_stack **s1, t_stack **s2);
 void		sort_five(t_stack **s1, t_stack **s2);
 void		helper_sort_five(t_stack **s1, t_stack **s2, int median);
 void		short_sorting(t_stack **a, t_stack **b, int size);
 
 //small sorting
-void		sort_less_than_ten(t_stack **s1, t_stack **s2);
+void		small_sorting(t_stack **s1, t_stack **s2);
 int			find_pos(t_stack *s, int min);
 
 //big sorting

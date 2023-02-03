@@ -6,7 +6,7 @@
 /*   By: mdanchev <mdanchev@42lausanne.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 12:53:59 by mdanchev          #+#    #+#             */
-/*   Updated: 2023/02/02 13:39:49 by mdanchev         ###   lausanne.ch       */
+/*   Updated: 2023/02/03 13:18:34 by mdanchev         ###   lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -52,34 +52,6 @@ void	sort_three(t_stack **s)
 	}
 }
 
-void	sort_four(t_stack **s1, t_stack **s2)
-{
-	int			min;
-
-	min = find_min_index(*s1);
-	if ((*s1)->index_sorted > (*s1)->next->index_sorted)
-	{
-		ft_sa(s1);
-		if (check_if_sorted(*s1) == true)
-			return ;
-	}
-	if ((*s1)->index_sorted == min)
-		ft_pb(s1, s2);
-	else
-	{
-		while ((*s1)->index_sorted != min)
-		{
-			ft_rra(s1);
-			if (check_if_sorted(*s1) == true)
-				return ;
-		}
-		ft_pb(s1, s2);
-	}
-	if (check_if_sorted(*s1) == false)
-		sort_three(s1);
-	ft_pa(s1, s2);
-}
-
 void	short_sorting(t_stack **a, t_stack **b, int size)
 {
 	if (size == 2)
@@ -87,7 +59,7 @@ void	short_sorting(t_stack **a, t_stack **b, int size)
 	else if (size == 3)
 		sort_three(a);
 	else if (size == 4)
-		sort_four(a, b);
+		small_sorting(a, b);
 	else if (size == 5)
 		sort_five(a, b);
 }

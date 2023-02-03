@@ -6,7 +6,7 @@
 /*   By: mdanchev <mdanchev@42lausanne.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 13:40:09 by mdanchev          #+#    #+#             */
-/*   Updated: 2023/02/02 13:57:37 by mdanchev         ###   lausanne.ch       */
+/*   Updated: 2023/02/03 13:19:47 by mdanchev         ###   lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -18,7 +18,7 @@ int	find_pos(t_stack *s, int min)
 	return (s->pos);
 }
 
-void	sort_less_than_ten(t_stack **s1, t_stack **s2)
+void	small_sorting(t_stack **s1, t_stack **s2)
 {
 	int	min;
 	int	middle;

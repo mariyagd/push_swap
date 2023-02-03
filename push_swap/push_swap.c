@@ -6,7 +6,7 @@
 /*   By: mdanchev <mdanchev@42lausanne.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 11:25:10 by mdanchev          #+#    #+#             */
-/*   Updated: 2023/02/02 15:29:44 by mdanchev         ###   lausanne.ch       */
+/*   Updated: 2023/02/03 13:19:10 by mdanchev         ###   lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -75,8 +75,8 @@ int	main(int ac, char **av)
 	if (size >= 2 && size <= 5)
 		short_sorting(&a, &b, size);
 	if (size >= 6 && size <= 90)
-		sort_less_than_ten(&a, &b);
-	if (size >= 11 && size <= 500)
+		small_sorting(&a, &b);
+	if (size >= 91)
 		big_sorting(&a, &b);
 	check_if_sorted_and_exit(a, b, size);
 	return (1);

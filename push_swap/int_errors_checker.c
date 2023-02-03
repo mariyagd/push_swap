@@ -6,7 +6,7 @@
 /*   By: mdanchev <mdanchev@42lausanne.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 11:15:52 by mdanchev          #+#    #+#             */
-/*   Updated: 2023/02/02 11:39:32 by mdanchev         ###   lausanne.ch       */
+/*   Updated: 2023/02/03 11:44:59 by mdanchev         ###   lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -54,9 +54,9 @@ void	int_check(char *str)
 
 	s_int_max = "2147483647";
 	i = 0;
-	len = 0;
 	if (!str)
 		return ;
+	len = ft_strlen(str);
 	if (len > 10)
 		error_msg_stop();
 	if (len == 10 && ft_strncmp(s_int_max, str, 10) < 0)
