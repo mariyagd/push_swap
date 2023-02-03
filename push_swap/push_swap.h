@@ -30,7 +30,7 @@ typedef struct s_stack
 	int					pos;
 }						t_stack;
 
-// errors checker
+/* errors checker*/
 void		negative_int_check(char *str);
 void		positive_int_check(char *str);
 void		no_int_errors(char **str);
@@ -39,11 +39,11 @@ void		no_other_char(char **str);
 void		no_errors(char **str);
 void		error_msg_stop(void);
 
-//string cases
+/*string cases*/
 bool		one_string_case(char *av);
 int			string_case(char **av);
 
-//stack a initialization
+/*stack a initialization*/
 t_stack		*create_stack_a(char **av, t_stack **a, t_stack **b);
 t_stack		*find_lastnode(t_stack **head);
 void		node_backadd(t_stack **head, t_stack **new_node);
@@ -54,25 +54,25 @@ int			stack_size(t_stack *ptr);
 void		set_actual_index(t_stack **a);
 t_stack		*find_before_last(t_stack **a);
 
-//free string
+/*free string*/
 void		free_string(char **str);
 void		free_list(t_stack **s);
 
-//sort operations
+/*sort operations*/
 void		sort_int_tab(int **tab, unsigned int size);
 void		sort_index(t_stack **head, int **array, int size);
 void		set_index(t_stack **head);
 void		set_position(t_stack **s);
 
-//check if sorted
+/*check if sorted*/
 void		check_if_sorted_and_exit(t_stack *s1, t_stack *s2, int size);
 bool		check_if_sorted(t_stack	*s);
 
-//index max et min
+/*index max et min*/
 int			find_max_index(t_stack *s);
 int			find_min_index(t_stack *s);
 
-//operations
+/*operations*/
 void		frontadd_push_op(t_stack **s1, t_stack **s2);
 void		push_op(t_stack **s1, t_stack **s2);
 void		ft_pb(t_stack **a, t_stack **b);
@@ -90,21 +90,21 @@ void		ft_sa(t_stack **a);
 void		ft_sb(t_stack **b);
 void		ft_ss(t_stack **a, t_stack **b);
 
-//median
+/*median*/
 int			find_median(t_stack *s);
 
-//short sorting
+/*short sorting*/
 void		sort_two(t_stack **s);
 void		sort_three(t_stack **s);
 void		sort_five(t_stack **s1, t_stack **s2);
 void		helper_sort_five(t_stack **s1, t_stack **s2, int median);
 void		short_sorting(t_stack **a, t_stack **b, int size);
 
-//small sorting
+/*small sorting*/
 void		small_sorting(t_stack **s1, t_stack **s2);
 int			find_pos(t_stack *s, int min);
 
-//big sorting
+/*big sorting*/
 void		big_sorting(t_stack **s1, t_stack **s2);
 int			count_numbers(t_stack *s, int median);
 int			median_big_sort(t_stack *s);
