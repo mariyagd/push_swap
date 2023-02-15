@@ -80,13 +80,17 @@ Par exemple les cas suivants doivent afficher le message d'erreur:
 ./push_swap 1 2 3 +999999999999999999999999999999999999999999999
 ./push_swap 1 2 3 3
 ./push_swap 1 2 3 four
+ ./push_swap 1 2 3 4four
 ```
  
  Ces cas envoient également des erreurs:
  
-``` diff
-- ./push_swap "bonjour"
-- ./push_swap bonjour
+``` c
+./push_swap "bonjour"
+./push_swap bonjour
+./push_swap 9999999999999999999999999
+./push_swap 99bonjour
+ 
 ```
 
 
