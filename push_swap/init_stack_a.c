@@ -6,7 +6,7 @@
 /*   By: mdanchev <mdanchev@42lausanne.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 12:29:17 by mdanchev          #+#    #+#             */
-/*   Updated: 2023/02/02 15:22:49 by mdanchev         ###   lausanne.ch       */
+/*   Updated: 2023/02/15 15:08:13 by mdanchev         ###   lausanne.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -108,7 +108,10 @@ t_stack	*create_stack_a(char **av, t_stack **a, t_stack **b)
 	else if (str_case == MULTIPLE_STRING)
 		*a = init_stack_a(av);
 	else if (str_case == ONE_NUM)
+	{
+		no_other_char(av);
 		exit(0);
+	}
 	if (!a)
 		return (NULL);
 	check_if_sorted_and_exit(*a, *b, stack_size(*a));

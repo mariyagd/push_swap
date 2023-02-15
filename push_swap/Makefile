@@ -6,7 +6,7 @@
 #    By: mdanchev <mdanchev@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/15 12:21:59 by mdanchev          #+#    #+#              #
-#    Updated: 2023/02/02 16:04:23 by mdanchev         ###   lausanne.ch        #
+#    Updated: 2023/02/15 15:14:04 by mdanchev         ###   lausanne.ch        #
 #                                                                              #
 # **************************************************************************** #
 # LEAKS Checking:
@@ -59,17 +59,17 @@ CFLAGS = -Wall -Wextra -Werror -g
 
 all:	${NAME}
 
-$(NAME):	${OBJS}
+libft/libft.a:
 		${MAKE} -C libft
-		cp ./libft/libft.a .
-		${CC} ${CFLAGS} -o ${NAME} ${OBJS} libft.a
+
+$(NAME):	${OBJS} libft/libft.a
+		${CC} ${CFLAGS} -o ${NAME} ${OBJS} libft/libft.a
 clean:
 		${MAKE} -C libft clean
 		${RM} ${OBJS}
 
 fclean:		clean
 		${MAKE} -C libft fclean
-		${RM} libft.a
 		${RM} ${NAME}
 
 re:		fclean all
