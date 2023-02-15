@@ -78,8 +78,10 @@ Par exemple les cas suivants doivent afficher le message d'erreur:
 ./push_swap 1 2 3 999999999999999999999999999999999999999999999
 ./push_swap 1 2 3 -999999999999999999999999999999999999999999999
 ./push_swap 1 2 3 +999999999999999999999999999999999999999999999
-./push_swap 1 2 3 four
 ./push_swap 1 2 3 3
+./push_swap 1 2 3 four
+./push_swap "one"
+./push_swap bonjour
 ```
 
 <details><summary> 
